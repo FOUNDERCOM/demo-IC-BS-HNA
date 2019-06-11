@@ -1,0 +1,122 @@
+#bs-earth {
+    position: absolute;
+    top: 90px;
+    left: 50px;
+    width: 200px;
+    height: 200px;
+
+    .earth1 {
+        width: 100%;
+        height: 100%;
+        border-radius: 100px;
+        background-image: url("./../../media/layouts/earth1.gif");
+        background-size: 240px;
+        background-position: -20px -10px;
+
+        -webkit-filter: url("./../../media/layouts/earth1.svg#earth");
+        filter: url("./../../media/layouts/earth1.svg#earth");
+    }
+    .earth2 {
+        width: 100%;
+        height: 100%;
+        border-radius: 100px;
+        background-image: url("./../../media/layouts/earth2.gif");
+        background-size: 230px;
+        background-position: -15px -15px;
+
+        -webkit-filter: url("./../../media/layouts/earth2.svg#earth");
+        filter: url("./../../media/layouts/earth2.svg#earth");
+    }
+    .earth3 {
+        width: 100%;
+        height: 100%;
+        border-radius: 100px;
+        background-image: url("./../../media/layouts/earth3.gif");
+        background-size: 225px;
+        background-position: -15px -12px;
+
+        -webkit-filter: url("./../../media/layouts/earth3.svg#earth");
+        filter: url("./../../media/layouts/earth3.svg#earth");
+    }
+}
+#bs-base-data {
+    position: absolute;
+    top: 95px;
+    left: 270px;
+    width: 130px;
+    height: 190px;
+
+    .bg-dark {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: $bgBlackColor;
+        opacity: $bgBlackOpacity;
+        z-index: 1;
+    }
+    .data {
+        position: absolute;
+        width: 110px;
+        height: 36px;
+        top: 25px;
+        left: 0;
+        text-align: right;
+        font-family: "DSEG7 Classic Mini";
+        font-size: 18px;
+        z-index: 3;
+    }
+
+    .person {
+        position: absolute;
+        width: 130px;
+        height: 60px;
+        top: 0;
+        left: 0;
+
+        .bg-img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url("./../../media/layouts/base-person.png");
+            -webkit-background-size: contain;
+            background-size: contain;
+            z-index: 2;
+        }
+    }
+
+    .house {
+        position: absolute;
+        width: 130px;
+        height: 60px;
+        top: 65px;
+        left: 0;
+
+        .bg-img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url("./../../media/layouts/base-house.png");
+            -webkit-background-size: contain;
+            background-size: contain;
+            z-index: 2;
+        }
+    }
+
+    .company {
+        position: absolute;
+        width: 130px;
+        height: 60px;
+        top: 130px;
+        left: 0;
+
+        .bg-img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url("./../../media/layouts/base-company.png");
+            -webkit-background-size: contain;
+            background-size: contain;
+            z-index: 2;
+        }
+    }
+}

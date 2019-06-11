@@ -1,0 +1,26 @@
+#bs-title {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    width: 450px;
+    height: 60px;
+    opacity: 1;
+
+    .bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: $bgBlackColor;
+        opacity: $bgBlackOpacity;
+        z-index: 1;
+    }
+    .title {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url("./../../media/layouts/logo.png");
+        -webkit-background-size: contain;
+        background-size: contain;
+        z-index: 2;
+    }
+}

@@ -1,7 +1,31 @@
-body {
+$mainColor:#33ffff;
+$abnormalBorderWidth:5px;
+$bgBlackColor:#000000;
+$bgBlackOpacity:0.6;
+
+@import "title";
+@import "basedata";
+
+@font-face {
+    font-family: "DSEG7 Classic Mini";
+    src: url('./../../media/fonts/DSEG7ClassicMini-Bold.woff.ttf');
+}
+
+.bs-body {
     transform-origin: left top;
     margin: 0;
     width: 1920px;
     height: 1080px;
     overflow: hidden;
+    background-image: url("./../../media/layouts/bg-all-temp.png");
+    -webkit-background-size: contain;
+    background-size: contain;
+
+    #layout {
+        width: 1920px;
+        height: 1080px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
 }
