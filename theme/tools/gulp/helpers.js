@@ -119,11 +119,11 @@ module.exports = {
             }).on('error', sass.logError);
         }).pipe(function () {
             return gulpif(config.cssMinify, cleancss());
-        }).pipe(function () {
-            return gulpif(true, autoprefixer({
-                browsers: ['last 2 versions'],
-                cascade: false,
-            }));
+        // }).pipe(function () {
+        //     return gulpif(true, autoprefixer({
+        //         browsers: ['last 2 versions'],
+        //         cascade: false,
+        //     }));
         }).pipe(function () {
             return gulpif(config.cssSourcemaps, sourcemaps.write('./'));
         });

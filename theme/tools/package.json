@@ -8,6 +8,12 @@
     },
     "author": "Jimmybly Lee",
     "license": "MIT",
+    "browserslist": [
+        "iOS >= 7",
+        "Android > 4.1",
+        "Firefox > 20",
+        "last 2 versions"
+    ],
     "dependencies": {
         "@fortawesome/fontawesome-free": "^5.9.0",
         "angular": "^1.7.8",
