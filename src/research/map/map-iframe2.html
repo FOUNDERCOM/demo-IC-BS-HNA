@@ -1,0 +1,20 @@
+<html>
+<head>
+
+</head>
+
+<body>
+    <div class="mainCon" id="mainCon"><iframe id="rightFrame" name="rightFrame" style="width:100%;height:100%;overflow:hidden;margin:0" scrolling="no" frameborder="0" src="http://172.18.117.97:8080/pgis/frame.html"></iframe></div>
+
+    <div>
+        <a href="javascript:" onclick="focusTarget()">clickme</a>
+    </div>
+    <script src="js/common/jquery-3.2.0.min.js"></script>
+    <script>
+    function focusTarget(){
+        window.parent.document.getElementById("rightFrame").contentWindow.viewer.globe.getLayer('203014', 'id').setVisible(true);
+        window.parent.document.getElementById("rightFrame").contentWindow.viewer.globe.getLayer('203014', 'id').centerAt();
+    }
+    </script>
+</body>
+</html>
