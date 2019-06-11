@@ -1,0 +1,81 @@
+{
+    "name": "icbs",
+    "version": "0.1.0",
+    "config": {
+        "demo": "",
+        "debug": false,
+        "compile": {
+            "jsUglify": false,
+            "cssMinify": false,
+            "jsSourcemaps": false,
+            "cssSourcemaps": false
+        },
+        "path": {
+            "src": "./../src/assets",
+            "node_modules": "./node_modules",
+
+            "demo_api_url": "https://www.founderinternational.com"
+        },
+        "dist": [
+            "./../dist/assets"
+        ]
+    },
+    "build": {
+        "vendors": {
+            "base": {
+                "src": {
+                    "mandatory": {
+                        "jquery": {
+                            "scripts": [
+                                "{$config.path.node_modules}/jquery/dist/jquery.js"
+                            ]
+                        },
+                        "angularjs": {
+                            "scripts": [
+                                "{$config.path.node_modules}/angular/angular.js"
+                            ]
+                        }
+                    },
+                    "optional": {
+                        "@fortawesome": {
+                            "styles": [
+                                "{$config.path.node_modules}/@fortawesome/fontawesome-free/css/all.min.css"
+                            ],
+                            "fonts": [
+                                "{$config.path.node_modules}/@fortawesome/fontawesome-free/webfonts/**"
+                            ]
+                        }
+                    }
+                },
+                "bundle": {
+                    "styles": "{$config.dist}/vendors/global/vendors.bundle.css",
+                    "scripts": "{$config.dist}/vendors/global/vendors.bundle.js",
+                    "images": "{$config.dist}/vendors/global/img",
+                    "fonts": "{$config.dist}/vendors/global/fonts"
+                }
+            },
+            "custom": {
+                "src": {
+                    "resources": [
+                        "{$config.path.node_modules}/cesium/Build/Cesium/**/*"
+                    ]
+                },
+                "output": {
+                    "resources": "{$config.dist}/vendors/global/Cesium/"
+                }
+            }
+        },
+        "demos": {
+        },
+        "media": {
+            "src": {
+                "media": [
+                    "{$config.path.src}/media/**/*.*"
+                ]
+            },
+            "output": {
+                "media": "{$config.dist}/media/"
+            }
+        }
+    }
+}
