@@ -10,7 +10,7 @@ var args = Object.assign({
     prod: false,
     default: false,
     angular: false,
-    theme: '',
+    theme: ''
 }, yargs.argv);
 
 var themes = ['bWV0cm9uaWM=', 'a2Vlbg==', 'YXRsYXM='];
