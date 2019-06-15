@@ -44,6 +44,15 @@
                             "fonts": [
                                 "{$config.path.node_modules}/@fortawesome/fontawesome-free/webfonts/**"
                             ]
+                        },
+                        "bootstrap-switch": {
+                            "styles": [
+                                "{$config.path.node_modules}/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css"
+                            ],
+                            "scripts": [
+                                "{$config.path.node_modules}/bootstrap-switch/dist/js/bootstrap-switch.js",
+                                "{$config.path.src}/js/vendors/bootstrap-switch.init.js"
+                            ]
                         }
                     }
                 },
@@ -76,6 +85,7 @@
                             "{$config.path.src}/js/theme/core/*.js",
                             "{$config.path.src}/js/theme/core/base/**/*.js",
                             "{$config.path.src}/js/theme/core/**/*.js",
+                            "{$config.path.src}/js/theme/demos/demo-hn-01/*.js",
                             "{$config.path.src}/js/theme/demos/demo-hn-01/**/*.js"
                         ]
                     },

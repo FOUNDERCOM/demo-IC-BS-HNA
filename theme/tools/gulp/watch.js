@@ -6,7 +6,7 @@ var connect = require('gulp-connect');
 gulp.task('localhost', function(cb) {
   connect.server({
     root: '../dist',
-    livereload: true,
+    livereload: true
   });
   cb();
 });
