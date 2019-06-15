@@ -11,8 +11,8 @@
     height: 1080px;
     overflow: hidden;
     background-image: url("./../../media/layouts/bg-all-temp.png");
-    -webkit-background-size: contain;
-    background-size: contain;
+    -webkit-background-size: 1920px 1080px;
+    background-size: 1920px 1080px;
 
     #layout {
         width: 1920px;

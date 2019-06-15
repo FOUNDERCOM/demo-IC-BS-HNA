@@ -1,0 +1,19 @@
+#bs-dangerous-person {
+    position: absolute;
+    top: 510px;
+    left: 25px;
+    width: 400px;
+    height: 360px;
+
+    .bs-title {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        width: 125px;
+        height: 125px;
+
+        background-image: url("./../../media/layouts/dangerous-person-title.png");
+        -webkit-background-size: contain;
+        background-size: contain;
+    }
+}
