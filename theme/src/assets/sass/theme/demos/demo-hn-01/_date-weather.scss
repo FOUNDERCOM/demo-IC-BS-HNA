@@ -1,9 +1,61 @@
 #bs-date-weather {
     position: absolute;
-    top: 20px;
+    top: 25px;
     right: 25px;
-    width: 310px;
+    width: 360px;
     height: 50px;
 
-    background-color: kt-state-color(dark);
+    color: lighten(kt-state-color(tech), 30%);
+
+    div {
+        float: left;
+    }
+    .separator {
+        margin: 5px 15px;
+        height: 35px;
+        width: 1px;
+        background: -webkit-gradient(linear, 0 5, 100% 100%, from(lighten(kt-state-color(tech), 30%)), to(lighten(kt-state-color(tech), 60%)));
+    }
+
+    .bs-date {
+        text-align: right;
+        .bs-date-time {
+            font-family: $bs-number-font-family;
+            font-size: 18px;
+        }
+        .bs-date-day {
+            float: none;
+            font-family: "微软雅黑", serif;
+            font-size: 8px;
+        }
+    }
+
+    .bs-area {
+        margin-top: -5px;
+        font-size: 32px;
+        font-family: "微软雅黑", serif;
+        font-weight: 900;
+    }
+    .bs-weather {
+        .bs-icon {
+            &::before {
+                font-size: 32px;
+            }
+        }
+        .bs-temperature {
+            font-family: $bs-number-font-family;
+            font-size: 28px;
+        }
+        .bs-temperature-o {
+            font-family: $bs-number-font-family;
+            font-size: 10px;
+            vertical-align: top;
+        }
+        .bs-weather-cn {
+            font-size: 14px;
+            font-family: "微软雅黑", serif;
+            vertical-align: bottom;
+            margin-left: -10px;
+        }
+    }
 }
