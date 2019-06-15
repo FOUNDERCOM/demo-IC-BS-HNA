@@ -5,7 +5,7 @@
     width: 200px;
     height: 200px;
 
-    .earth1 {
+    .bs-earth1 {
         width: 100%;
         height: 100%;
         border-radius: 100px;
@@ -16,7 +16,7 @@
         -webkit-filter: url("./../../media/layouts/earth1.svg#earth");
         filter: url("./../../media/layouts/earth1.svg#earth");
     }
-    .earth2 {
+    .bs-earth2 {
         width: 100%;
         height: 100%;
         border-radius: 100px;
@@ -27,7 +27,7 @@
         -webkit-filter: url("./../../media/layouts/earth2.svg#earth");
         filter: url("./../../media/layouts/earth2.svg#earth");
     }
-    .earth3 {
+    .bs-earth3 {
         width: 100%;
         height: 100%;
         border-radius: 100px;
@@ -46,34 +46,35 @@
     width: 130px;
     height: 190px;
 
-    .bg-dark {
+    .bs-base-data-bg {
         position: absolute;
         width: 100%;
         height: 100%;
-        background-color: $bgBlackColor;
-        opacity: $bgBlackOpacity;
+        background-color: kt-state-color(dark);
+        opacity: $bs-dark-background-opacity;
         z-index: 1;
     }
-    .data {
+    .bs-base-data-value {
         position: absolute;
         width: 110px;
         height: 36px;
-        top: 25px;
+        top: 22px;
         left: 0;
         text-align: right;
-        font-family: "DSEG7 Classic Mini";
+        color: kt-state-color(dark);
+        font-family: $bs-number-font-family;
         font-size: 18px;
         z-index: 3;
     }
 
-    .person {
+    .bs-base-data-person {
         position: absolute;
         width: 130px;
         height: 60px;
         top: 0;
         left: 0;
 
-        .bg-img {
+        .bs-base-data-bg-img {
             position: absolute;
             width: 100%;
             height: 100%;
@@ -84,14 +85,14 @@
         }
     }
 
-    .house {
+    .bs-base-data-house {
         position: absolute;
         width: 130px;
         height: 60px;
         top: 65px;
         left: 0;
 
-        .bg-img {
+        .bs-base-data-bg-img {
             position: absolute;
             width: 100%;
             height: 100%;
@@ -102,14 +103,14 @@
         }
     }
 
-    .company {
+    .bs-base-data-company {
         position: absolute;
         width: 130px;
         height: 60px;
         top: 130px;
         left: 0;
 
-        .bg-img {
+        .bs-base-data-bg-img {
             position: absolute;
             width: 100%;
             height: 100%;

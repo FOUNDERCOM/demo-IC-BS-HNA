@@ -1,31 +1,34 @@
-$mainColor:#33ffff;
-$abnormalBorderWidth:5px;
-$bgBlackColor:#000000;
-$bgBlackOpacity:0.6;
 
+
+////////////////////////////////////////////////////////////////
+///////////// DO NOT MODIFY BELOW INCLUDE ORDER ////////////////
+////////////////////////////////////////////////////////////////
+
+// 1: Include global config
+@import "../../config";
+
+// 2: Include demo config (that overrides the above global config)
+@import "config";
+
+// 3: Bootstrap Include
+@import "../../../bootstrap/variables";
+@import "../../../../../../tools/node_modules/bootstrap/scss/bootstrap";
+@import "../../../bootstrap/bootstrap.scss";
+
+// 4: Core Include
+@import "../../core/include";
+////////////////////////////////////////////////////////////////
+///////////// DO NOT MODIFY ABOVE INCLUDE ORDER ////////////////
+////////////////////////////////////////////////////////////////
+
+// 5: Variables
+@import "variables";
+
+// 6: Body
+@import "base";
+
+// 7: Widgets
 @import "title";
 @import "basedata";
+@import "alarm-statistics";
 
-@font-face {
-    font-family: "DSEG7 Classic Mini";
-    src: url('./../../media/fonts/DSEG7ClassicMini-Bold.woff.ttf');
-}
-
-.bs-body {
-    transform-origin: left top;
-    margin: 0;
-    width: 1920px;
-    height: 1080px;
-    overflow: hidden;
-    background-image: url("./../../media/layouts/bg-all-temp.png");
-    -webkit-background-size: contain;
-    background-size: contain;
-
-    #layout {
-        width: 1920px;
-        height: 1080px;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-}

@@ -1,0 +1,28 @@
+<div class="bs-list" ng-controller="AlarmListCtrl">
+    <div class="bs-item">
+        <i class="fa fa-bookmark kt-font-tech"></i>
+        <span class="bs-label">感知数</span>
+        <span class="bs-data"><ul id="feelingTotalNum"></ul></span>
+    </div>
+    <div class="bs-item">
+        <i class="fa fa-bookmark kt-font-warning"></i>
+        <span class="bs-label">预警数</span>
+        <span class="bs-data"><ul id="alarmTotalNum"></ul></span>
+    </div>
+    <div class="bs-item">
+        <i class="fa fa-bookmark kt-font-danger"></i>
+        <span class="bs-label">任务数</span>
+        <span class="bs-data"><ul id="taskTotalNum"></ul></span>
+    </div>
+    <div class="bs-item">
+        <i class="fa fa-bookmark kt-font-success"></i>
+        <span class="bs-label">处置数</span>
+        <span class="bs-data"><ul id="dealingTotalNum"></ul></span>
+    </div>
+    <div class="bs-compare">
+        <span class="bs-label">同比</span>
+        <span class="bs-data kt-font-success">+{{tongbiNum}}%</span>
+        <span class="bs-label">环比</span>
+        <span class="bs-data kt-font-danger">-{{huanbiNum}}%</span>
+    </div>
+</div>

@@ -21,5 +21,4 @@
  * @author Jimmybly Lee
  */
 angular.module("WebAppICBS", [
-
 ]);
