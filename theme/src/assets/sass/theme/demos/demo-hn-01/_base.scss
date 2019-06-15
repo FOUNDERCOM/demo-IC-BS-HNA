@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: "DSEG7 Classic Mini";
     src: url('./../../media/fonts/DSEG7ClassicMini-Bold.woff.ttf');
@@ -29,6 +28,29 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
+
+    .bs-default-title-left {
+        width: 60% !important;
+    }
+    .bs-default-title-right {
+        right: 0;
+        width: 60% !important;
+    }
+    .bs-default-title {
+        position: absolute;
+        top: 10px;
+        width: 100%;
+        height: 35px;
+        text-align: center;
+        color: kt-state-color(tech);
+        font-size: 20px;
+        font-family: "微软雅黑", serif;
+        font-weight: 900;
+        background-image: url("./../../media/layouts/default-title-bg.png");
+        background-size: auto 60%;
+        background-repeat: no-repeat;
+        background-position: bottom center;
+    }
 
     .bs-ex-border {
         border: 0 !important;
