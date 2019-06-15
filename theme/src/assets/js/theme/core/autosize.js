@@ -25,7 +25,7 @@
     var iframeScale_ = function() {
         var width = $(window).width(),
             height = $(window).height();
-        var scaleX = width / 1920,
+        var scaleX = width / 2048,
             scaleY = height / 1080;
         $("body").css("transform", "scale(" + scaleX + ", " + scaleY + ")");
     };
