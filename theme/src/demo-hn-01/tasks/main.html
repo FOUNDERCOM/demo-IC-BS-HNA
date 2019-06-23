@@ -1,7 +1,11 @@
 
-<div class="bs-exchange-border-box">
+<div class="bs-exchange-border-box" ng-controller="TaskCtrl">
     <div class="bs-ex-border bs-ex-border-top"></div>
+    <div class="bs-ex-border bs-ex-border-top-light"></div>
     <div class="bs-ex-border-bg"></div>
     <div class="bs-ex-border bs-ex-border-bottom"></div>
     <div class="bs-default-title bs-default-title-left">预警与任务</div>
+
+    <div class="bs-tasks-list-pg" ng-include="'./tasks/tasks-list.html'"></div>
+
 </div>

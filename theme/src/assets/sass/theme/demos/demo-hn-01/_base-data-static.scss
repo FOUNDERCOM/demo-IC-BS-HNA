@@ -4,4 +4,40 @@
     left: 1320px;
     width: 575px;
     height: 175px;
+
+    .bs-data {
+        position: absolute;
+        top: 50px;
+        left: 15px;
+        width: 560px;
+        height: 100px;
+        color: kt-state-color(tech);
+        .bs-item {
+            width: 80px;
+            height: 45px;
+            padding: 5px;
+            background-image: url("./../../media/layouts/base-static-item-bg.png");
+            -webkit-background-size: contain;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            .bs-label {
+                position: absolute;
+                left: 25px;
+                top: 6px;
+
+                font-family: "微软雅黑", serif;
+                font-size: 12px;
+            }
+            .bs-value {
+                position: absolute;
+                top: 20px;
+                right: 10px;
+
+                font-family: $bs-number-font-family;
+                font-size: 12px;
+            }
+        }
+    }
 }

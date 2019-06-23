@@ -1,0 +1,152 @@
+<div class="bs-filters">
+    <div class="dropdown dropdown-inline">
+        <button type="button" class="btn btn-sm btn-icon btn-circle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-filter kt-font-tech"></i>
+        </button>
+        <div class="dropdown-menu">
+            <div class="bs-ex-border bs-ex-border-top"></div>
+            <div class="bs-ex-border bs-ex-border-top-light"></div>
+            <div class="bs-ex-border-bg"></div>
+            <div class="bs-ex-border bs-ex-border-bottom"></div>
+
+            <!-- 预警来源过滤 -->
+            <div class="dropdown-item">
+                <span class="kt-checkbox-inline">
+                    <label class="kt-checkbox kt-checkbox--bold kt-checkbox--tech kt-font-tech">
+                        <input type="checkbox" ng-checked="filterSettings.res.all"
+                               ng-model="filterSettings.res.all"> 全部
+                        <span></span>
+                    </label>
+                    <label class="kt-checkbox kt-checkbox--bold kt-checkbox--tech kt-font-tech
+                     {{filterSettings.res.all ? 'kt-checkbox--disabled' : ''}}">
+                        <input type="checkbox" ng-checked="filterSettings.res.alarm"
+                               ng-model="filterSettings.res.alarm" ng-disabled="filterSettings.res.all"> 预警
+                        <span></span>
+                    </label>
+                    <label class="kt-checkbox kt-checkbox--bold kt-checkbox--tech kt-font-tech
+                    {{filterSettings.res.all ? 'kt-checkbox--disabled' : ''}}">
+                        <input type="checkbox" ng-checked="filterSettings.res.task"
+                               ng-model="filterSettings.res.task" ng-disabled="filterSettings.res.all"> 任务
+                        <span></span>
+                    </label>
+                </span>
+            </div>
+
+            <!-- 分隔符 -->
+            <div class="dropdown-divider"></div>
+
+            <!-- 执行状态过滤 -->
+            <div class="dropdown-item">
+                <span class="kt-checkbox-inline">
+                    <label class="kt-checkbox kt-checkbox--bold kt-checkbox--tech kt-font-tech">
+                        <input type="checkbox" ng-checked="filterSettings.status.all"
+                               ng-model="filterSettings.status.all"> 全部
+                        <span></span>
+                    </label>
+                    <label class="kt-checkbox kt-checkbox--bold kt-checkbox--tech kt-font-tech
+                     {{filterSettings.status.all ? 'kt-checkbox--disabled' : ''}}">
+                        <input type="checkbox" ng-checked="filterSettings.status.accept"
+                               ng-model="filterSettings.status.accept"> 已签收
+                        <span></span>
+                    </label>
+                    <label class="kt-checkbox kt-checkbox--bold kt-checkbox--tech kt-font-tech
+                     {{filterSettings.status.all ? 'kt-checkbox--disabled' : ''}}">
+                        <input type="checkbox" ng-checked="filterSettings.status.response"
+                               ng-model="filterSettings.status.response"> 已处置
+                        <span></span>
+                    </label>
+                </span>
+            </div>
+
+            <!-- 分隔符 -->
+            <div class="dropdown-divider"></div>
+
+            <!-- 类型过滤 -->
+            <div class="dropdown-item">
+                <span class="kt-checkbox-list">
+                    <label class="kt-checkbox kt-checkbox--bold kt-checkbox--tech kt-font-tech">
+                        <input type="checkbox" ng-checked="filterSettings.type.all"
+                               ng-model="filterSettings.type.all"> 全部
+                        <span></span>
+                    </label>
+                    <label ng-repeat="item in typeList"
+                           class="kt-checkbox kt-checkbox--bold
+                           kt-checkbox--{{item.filterColor ? item.filterColor : item.color}}
+                           kt-font-{{item.filterColor ? item.filterColor : item.color}}
+                           {{filterSettings.type.all ? 'kt-checkbox--disabled' : ''}}">
+                        <input type="checkbox" ng-checked="filterSettings.type[item.name]"
+                        ng-model="filterSettings.type[item.name]"
+                        ng-change="uncheckOthers(item.name)"> {{item.name}}
+                        <span></span>
+                    </label>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bs-tasks-list" data-ng-init="perfect()">
+    <div class="bs-item" ng-repeat="item in list
+    | filter: taskFilter">
+        <i class="fa fa-info-circle kt-font-success kt-font-lg" ng-if="item['task_res'] == '任务'" title="任务"></i>
+        <i class="fa fa-bell kt-font-warning kt-font-lg" ng-if="item['task_res'] != '任务'" title="预警"></i>
+        <span class="kt-badge kt-badge--md kt-badge--inline kt-font-lg kt-badge--{{colors[item['task_type']]}}">
+                {{item.task_type}}
+        </span>
+
+        <i class="fa fa-calendar-check kt-font-lg kt-font-success" ng-if="item['task_accept'].startsWith('已')" title="{{item['task_accept']}}"></i>
+        <i class="fa fa-business-time kt-font-lg kt-font-danger" ng-if="!item['task_accept'].startsWith('已')" title="{{item['task_accept']}}"></i>
+
+        <i class="fa fa-check-square kt-font-lg kt-font-success" ng-if="item['task_response'].startsWith('已')" title="{{item['task_response']}}"></i>
+        <i class="fa fa-minus-square kt-font-lg kt-font-danger" ng-if="!item['task_response'].startsWith('已')" title="{{item['task_response']}}"></i>
+
+        <span class="bs-task-date">{{item.task_date}}</span>
+
+        <span class="bs-context kt-font-{{item['task_res'] == '任务' ? 'tech' : 'warning'}}">
+                {{item.task_content}}
+        </span>
+    </div>
+</div>
+
+<!--begin: Pagination-->
+<div class="bs-pagination kt-pagination kt-pagination--tech">
+    <ul class="kt-pagination__links">
+        <li class="kt-pagination__link--first">
+            <a href="#"><i class="fa fa-angle-double-left kt-font-tech"></i></a>
+        </li>
+        <li class="kt-pagination__link--next">
+            <a href="#"><i class="fa fa-angle-left kt-font-tech"></i></a>
+        </li>
+        <li>
+            <a href="#">...</a>
+        </li>
+        <li>
+            <a href="#">29</a>
+        </li>
+        <li>
+            <a href="#">30</a>
+        </li>
+        <li>
+            <a href="#">31</a>
+        </li>
+        <li class="kt-pagination__link--active">
+            <a href="#">32</a>
+        </li>
+        <li>
+            <a href="#">33</a>
+        </li>
+        <li>
+            <a href="#">34</a>
+        </li>
+        <li>
+            <a href="#">...</a>
+        </li>
+        <li class="kt-pagination__link--prev">
+            <a href="#"><i class="fa fa-angle-right kt-font-tech"></i></a>
+        </li>
+        <li class="kt-pagination__link--last">
+            <a href="#"><i class="fa fa-angle-double-right kt-font-tech"></i></a>
+        </li>
+    </ul>
+</div>
+
+<!--end: Pagination-->

@@ -1,7 +1,17 @@
 
 <div class="bs-exchange-border-box">
     <div class="bs-ex-border bs-ex-border-top"></div>
+    <div class="bs-ex-border bs-ex-border-top-light"></div>
     <div class="bs-ex-border-bg"></div>
     <div class="bs-ex-border bs-ex-border-bottom"></div>
     <div class="bs-default-title">基础数据</div>
+
+    <div class="bs-data row" ng-controller="BaseDataStaticCtrl">
+        <div class="col-md-2" ng-repeat="item in list">
+            <div class="bs-item">
+                <div class="bs-label">{{item.title}}</div>
+                <div class="bs-value">{{item.value}}</div>
+            </div>
+        </div>
+    </div>
 </div>

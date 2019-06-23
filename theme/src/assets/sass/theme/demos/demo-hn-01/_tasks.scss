@@ -2,6 +2,107 @@
     position: absolute;
     top: 460px;
     right: 25px;
-    width: 475px;
+    width: $bs-widget-default-width;
     height: 595px;
+
+    .bs-tasks-list-pg {
+        position: absolute;
+        top: 50px;
+        left: 20px;
+        width: 330px;
+        height: 640px;
+
+        .bs-filters {
+            position: absolute;
+            top: 5px;
+            left: 10px;
+            span {
+                float: left;
+                margin-left: 5px;
+            }
+            .dropdown-menu {
+                background-color: rgba(0,0,0,0.5);
+                .dropdown-item:hover, .dropdown-item:focus {
+                    background-color: transparent;
+                }
+            }
+            .kt-switch  {
+                // Small size
+                &.kt-switch--bs-xs {
+                    $kt-switch-margin: 2px 0;
+                    $kt-switch-width: 24px;
+                    $kt-switch-height: 16px;
+                    $kt-switch-line-height: 16px;
+                    $kt-switch-space: 2px;
+                    $kt-switch-checked-tick-pos: 10px;
+                    $kt-switch-icon-font-size: 0.6em;
+
+                    @include kt-switch-size(
+                            $kt-switch-margin,
+                            $kt-switch-width,
+                            $kt-switch-height,
+                            $kt-switch-line-height,
+                            $kt-switch-space,
+                            $kt-switch-checked-tick-pos,
+                            $kt-switch-icon-font-size
+                    );
+                }
+            }
+        }
+
+        .bs-tasks-list {
+            position: absolute;
+            top: 30px;
+            width: 330px;
+            height: 450px;
+
+            .ps__rail-y  {
+                .ps__thumb-y{
+                    background-color: kt-state-color(tech);
+                }
+            }
+
+            font-size: 16px;
+            .bs-item {
+                height: 70px;
+                -ms-word-break: break-all;
+                word-break: break-all;
+                margin-top: 5px;
+
+                background-image: url("./../../media/layouts/task-separator.png");
+                -webkit-background-size: contain;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom;
+
+                .bs-task-date {
+                    padding-left: 20px;
+                    color: kt-state-color(tech);
+                    font-size: 10px;
+                    font-family: $bs-number-font-family;
+                }
+                .bs-context {
+                    font-size: 14px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                }
+            }
+        }
+
+        .bs-pagination {
+            position: absolute;
+            top: 460px;
+            width: 330px;
+            height: 100px;
+            li {
+                a {
+                    min-width: 20px;
+                    min-height: 20px;
+                }
+            }
+        }
+    }
 }

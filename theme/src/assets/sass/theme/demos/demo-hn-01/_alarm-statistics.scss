@@ -2,13 +2,13 @@
     position: absolute;
     top: 300px;
     left: 25px;
-    width: 400px;
+    width: $bs-widget-default-width;
     height: 200px;
 
     .bs-circle {
         position: absolute;
         top: 15px;
-        left: 20px;
+        left: 5px;
 
         height: 175px;
         width: 130px;
@@ -85,8 +85,8 @@
     .bs-list {
         position: absolute;
         top: 10px;
-        left: 75px;
-        width: 240px;
+        left: 65px;
+        width: 210px;
 
         .bs-item {
             padding: 3px 10px ;
@@ -100,7 +100,7 @@
             }
 
             .bs-data {
-                width: 130px;
+                width: 120px;
                 float: right;
                 text-align: right;
                 font-family: $bs-number-font-family;
@@ -109,7 +109,7 @@
 
                 ul {
                     width: 100px;
-                    margin: 0;
+                    margin: 5px 0 0 0;
                     overflow: hidden;
                     height: 20px;
                     position: relative;
@@ -127,7 +127,7 @@
         }
         .bs-compare {
             .bs-label {
-                padding-left: 40px;
+                padding-left: 20px;
                 font-size: 18px;
                 color: kt-state-color(light);
             }
