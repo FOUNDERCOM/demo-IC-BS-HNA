@@ -23,7 +23,7 @@
 angular.module('WebAppICBS').controller('AlarmListCtrl', ['$rootScope', '$scope', function ($rootScope, $scope) {
 
     var cfg = {
-        colWidth: 13,
+        colWidth: 15,
         height: 20,
         align: 'right'
     };
