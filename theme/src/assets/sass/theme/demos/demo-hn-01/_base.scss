@@ -31,9 +31,10 @@
 
     .bs-default-title-left {
         width: 60% !important;
+        left: 10%;
     }
     .bs-default-title-right {
-        right: 0;
+        right: 10%;
         width: 60% !important;
     }
     .bs-default-title {
@@ -58,7 +59,19 @@
         width: 100%;
         height: 50%;
     }
-
+    .bs-ex-border-top-light {
+        top: 0;
+        &::before {
+            position: absolute;
+            top: 2px;
+            right: 0;
+            content: '';
+            display: block;
+            width: 100px;
+            height: 10px;
+            border-top: 2px solid kt-state-color(tech);;
+        }
+    }
     .bs-ex-border-top {
         top: 0;
         &::before {
@@ -80,8 +93,8 @@
             right: 0;
             content: '';
             display: block;
-            width: 10px;
-            height: 10px;
+            width: 30px;
+            height: 15px;
             border-right: $bs-abnormal-border-cfg;
             border-top: $bs-abnormal-border-cfg;
         }
@@ -117,13 +130,13 @@
 
     .bs-ex-border-bg {
         position: absolute;
-        top: 7px;
-        left: 7px;
+        top: 9px;
+        left: 9px;
 
         box-sizing: unset;
 
-        height: calc(100% - 18px);
-        width: calc(100% - 18px);
+        height: calc(100% - 22px);
+        width: calc(100% - 22px);
         overflow: hidden;
         background-color: kt-get($kt-state-colors, light, inverse);
         border: 2px solid kt-state-color(tech);
