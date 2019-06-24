@@ -1,0 +1,17 @@
+#bs-map-mask {
+    position: absolute;
+    width: 1920px;
+    height: 85px;
+    z-index: 1;
+
+    background-image: url("./../../media/layouts/map-mask.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#bs-map {
+    background-color: #66ccee;
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    z-index: 0;
+}

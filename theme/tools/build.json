@@ -52,6 +52,13 @@
                             "scripts": [
                                 "{$config.path.node_modules}/perfect-scrollbar/dist/perfect-scrollbar.js"
                             ]
+                        },
+                        "EzMap": {
+                            "scripts": [
+                                "{$config.path.src}/js/theme/vendors/EzMapAPI.js",
+                                "{$config.path.src}/js/theme/vendors/FMapClient.js",
+                                "{$config.path.src}/js/theme/vendors/EzServerClient.js"
+                            ]
                         }
                     },
                     "optional": {
@@ -69,7 +76,7 @@
                             ],
                             "scripts": [
                                 "{$config.path.node_modules}/bootstrap-switch/dist/js/bootstrap-switch.js",
-                                "{$config.path.src}/js/vendors/bootstrap-switch.init.js"
+                                "{$config.path.src}/js/theme/vendors/bootstrap-switch.init.js"
                             ]
                         }
                     }
