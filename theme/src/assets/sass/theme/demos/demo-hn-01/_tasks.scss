@@ -4,6 +4,7 @@
     right: 25px;
     width: $bs-widget-default-width;
     height: 595px;
+    z-index: $bs-widget-default-z-index;
 
     .bs-tasks-list-pg {
         position: absolute;

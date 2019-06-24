@@ -4,6 +4,7 @@
     left: 25px;
     width: $bs-widget-default-width;
     height: 200px;
+    z-index: $bs-widget-default-z-index;
 
     .bs-circle {
         position: absolute;

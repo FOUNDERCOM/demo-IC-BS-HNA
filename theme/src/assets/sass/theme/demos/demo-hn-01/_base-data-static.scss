@@ -4,6 +4,7 @@
     left: 1320px;
     width: 575px;
     height: 175px;
+    z-index: $bs-widget-default-z-index;
 
     .bs-data {
         position: absolute;

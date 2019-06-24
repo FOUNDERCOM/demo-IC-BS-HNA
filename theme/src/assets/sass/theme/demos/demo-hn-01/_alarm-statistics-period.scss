@@ -4,6 +4,7 @@
     left: 25px;
     width: 1385px;
     height: 175px;
+    z-index: $bs-widget-default-z-index;
 
     background-color: kt-state-color(dark);
 }

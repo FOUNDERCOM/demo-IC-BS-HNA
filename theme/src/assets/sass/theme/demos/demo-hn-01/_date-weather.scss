@@ -4,6 +4,7 @@
     right: 25px;
     width: 360px;
     height: 50px;
+    z-index: $bs-widget-default-z-index;
 
     color: lighten(kt-state-color(tech), 30%);
 
