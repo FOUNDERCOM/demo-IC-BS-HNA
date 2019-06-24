@@ -67,3 +67,5 @@ typings/
 
 # dist
 theme/dist
+# third part js lib
+Cesium
