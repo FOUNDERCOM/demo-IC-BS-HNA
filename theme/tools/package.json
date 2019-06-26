@@ -62,7 +62,8 @@
         "wnumb": "^1.1.0",
 
         "angular": "^1.7.8",
-        "cesium": "^1.58.1"
+        "cesium": "^1.58.1",
+        "d3": "^5.9.2"
     },
     "devDependencies": {
         "del": "^3.0.0",
