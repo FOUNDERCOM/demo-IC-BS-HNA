@@ -29,6 +29,8 @@ angular.module('WebAppICBS').controller('MapCtrl', ['$rootScope', '$scope', func
 
         //矢量地图
         wmtslayer = new Ez.TileLayer.WMTS('test', 'http://172.25.16.102:8080/EzServer7/WMTS?SERVICE=WMTS', {
+        // wmtslayer = new Ez.TileLayer.WMTS('test', "http://t0.tianditu.com/img_w/wmts?service=wmts&request=GetTile&version=1.0.0&LAYER=img&tileMatrixSet=w&TileMatrix={TileMatrix}&TileRow={TileRow}&TileCol={TileCol}&style=default&format=tiles", {
+
             type: 'wmts',
             crs: '4326',
             wrapX: false,
@@ -84,7 +86,7 @@ angular.module('WebAppICBS').controller('MapCtrl', ['$rootScope', '$scope', func
                                 break;
                             }
                         }
-                    };
+                    }
                 });
 
                 techniques.forEach(function (t) {
@@ -114,10 +116,12 @@ angular.module('WebAppICBS').controller('MapCtrl', ['$rootScope', '$scope', func
                 }
             }
         });
-        var tileset = new Cesium.Cesium3DTileset({ url: "http://172.18.117.97:8080/pgis/data/obq/hn1/tileset.json" });
+        //var tileset = new Cesium.Cesium3DTileset({ url: "http://172.18.117.97:8080/pgis/data/obq/hn1/tileset.json" });
+        var tileset = new Cesium.Cesium3DTileset({ url: "http://192.168.43.81:9002/api/folder/1c0a82b18ec84fe78005728503b4b8cc/tileset.json" });
         scene.primitives.add(tileset);
         scene.camera.flyTo({
-            destination:Cesium.Cartesian3.fromDegrees(111.341764,25.269629, 150),
+            // destination:Cesium.Cartesian3.fromDegrees(111.341764,25.269629, 150),
+            destination:Cesium.Cartesian3.fromDegrees(114.06121924659066,30.30007649989971, 200),
             orientation : {
                 heading : Cesium.Math.toRadians(0.0),
                 pitch : Cesium.Math.toRadians(-25.0),
