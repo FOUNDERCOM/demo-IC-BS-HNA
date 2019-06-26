@@ -113,7 +113,7 @@ angular.module('WebAppICBS').controller('TaskCtrl', ['$rootScope', '$scope', fun
         });
     };
 
-    $.getJSON("./../../../demo-hn-01/data/mock.json", function (res) {
+    $.getJSON("./../../../demo-hn-01/data/tasks.json", function (res) {
         $scope.list = res.data;
     });
 

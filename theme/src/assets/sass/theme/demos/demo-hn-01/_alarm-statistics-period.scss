@@ -1,3 +1,4 @@
+$bs-time-line-height: 50px;
 #bs-alarm-statistics-period {
     position: absolute;
     bottom: 25px;
@@ -6,5 +7,78 @@
     height: 175px;
     z-index: $bs-widget-default-z-index;
 
-    background-color: kt-state-color(dark);
+    .bs-bg {
+        position: absolute;
+        z-index: -1;
+
+        box-sizing: unset;
+
+        height: calc(100%);
+        width: calc(100%);
+        overflow: hidden;
+        background-color: kt-get($kt-state-colors, light, inverse);
+        opacity: $bs-dark-background-opacity;
+    }
+    .bs-alarm-statistics-bar {
+        width: 1385px;
+        height: 120px;
+        .bs-axis-alarm {
+            text {
+                color: kt-state-color(light);
+                font-size: 12px;
+            }
+            path, line{
+                color: transparent;
+            }
+        }
+    }
+    .bs-alarm-statistics-time-line {
+        width: 1385px;
+        height: $bs-time-line-height;
+        margin-top: 2px;
+        margin-left: 2px;
+
+        color: kt-state-color(tech);
+        font-family: "微软雅黑", serif;
+
+        .bs-box {
+            border: 2px solid kt-state-color(tech);
+            height: $bs-time-line-height;
+            float: left;
+            line-height: $bs-time-line-height;
+            text-align: center;
+            margin-left: 3px;
+        }
+        .bs-time-line-name {
+            margin-left: 0;
+            display: inline-block;
+            width: $bs-time-line-height;
+        }
+        .bs-arrow {
+            width: $bs-time-line-height;
+            font-size: 18px;
+        }
+        .bs-time-line-list {
+            width: 1220px;
+            display: flex;
+            padding-left: 0;
+            li {
+                line-height: $bs-time-line-height;
+                flex: 1;
+                list-style: none;
+                text-align: center;
+            }
+        }
+        .bs-week {
+            display: block;
+            line-height: 18px;
+            font-size: 12px;
+        }
+        .bs-day {
+            display: block;
+            line-height: 28px;
+            font-size: 20px;
+        }
+    }
+
 }
