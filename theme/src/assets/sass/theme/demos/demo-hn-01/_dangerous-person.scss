@@ -17,4 +17,16 @@
         -webkit-background-size: contain;
         background-size: contain;
     }
+    .bs-vip {
+        position: absolute;
+        top:50px;
+        left:15px;
+        width: 90%;
+        height: 90%;
+        background-image: url("./../../media/layouts/vip.png");
+        -webkit-background-size: contain;
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: 3;
+    }
 }
