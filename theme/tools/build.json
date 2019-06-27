@@ -13,7 +13,6 @@
         "path": {
             "src": "./../src/assets",
             "node_modules": "./node_modules",
-
             "demo_api_url": "https://www.founderinternational.com"
         },
         "dist": [
@@ -75,6 +74,14 @@
                                 "{$config.path.node_modules}/@fortawesome/fontawesome-free/webfonts/**"
                             ]
                         },
+                        "line-awesome": {
+                            "styles": [
+                                "{$config.path.src}/vendors/line-awesome/css/line-awesome.css"
+                            ],
+                            "fonts": [
+                                "{$config.path.src}/vendors/line-awesome/fonts/**"
+                            ]
+                        },
                         "bootstrap-switch": {
                             "styles": [
                                 "{$config.path.node_modules}/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css"
@@ -123,10 +130,32 @@
                         "styles": "{$config.dist}/css/demo-hn-01/style.bundle.css",
                         "scripts": "{$config.dist}/js/demo-hn-01/scripts.bundle.js"
                     }
-                },
-                "skins": {
+                }
+            },
+            "lab": {
+                "base": {
+                    "src": {
+                        "styles": [
+                            "{$config.path.src}/sass/theme/demos/demo-lab/style.scss"
+                        ]
+                    },
+                    "bundle": {
+                        "styles": "{$config.dist}/css/demo-lab/style.bundle.css"
+                    }
                 },
                 "pages": {
+                    "src": {
+                        "styles-by-demo": [
+                            "{$config.path.src}/sass/theme/demos/demo-lab/**/*.scss"
+                        ],
+                        "scripts": [
+                            "{$config.path.src}/js/theme/demos/demo-lab/**/*.js"
+                        ]
+                    },
+                    "output": {
+                        "styles-by-demo": "{$config.dist}/css/demo-lab/",
+                        "scripts": "{$config.dist}/js/demo-lab/"
+                    }
                 }
             }
         },

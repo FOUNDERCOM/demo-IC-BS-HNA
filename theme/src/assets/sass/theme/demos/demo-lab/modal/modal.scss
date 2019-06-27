@@ -1,0 +1,32 @@
+
+
+////////////////////////////////////////////////////////////////
+///////////// DO NOT MODIFY BELOW INCLUDE ORDER ////////////////
+////////////////////////////////////////////////////////////////
+
+// 1: Include global config
+@import "../../../config";
+
+// 2: Include demo config (that overrides the above global config)
+@import "../config";
+////////////////////////////////////////////////////////////////
+///////////// DO NOT MODIFY ABOVE INCLUDE ORDER ////////////////
+////////////////////////////////////////////////////////////////
+
+.modal-content {
+    background-color: transparent;
+    border: 0;
+    .modal-header {
+        border: 0;
+        .modal-title {
+            color: kt-state-color(tech) !important;
+        }
+        .close {
+            color: kt-state-color(tech) !important;
+        }
+    }
+    .modal-footer {
+        border: 0;
+        padding: 1.5em;
+    }
+}

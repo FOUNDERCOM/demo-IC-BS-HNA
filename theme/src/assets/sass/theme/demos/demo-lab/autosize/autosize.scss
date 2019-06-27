@@ -1,0 +1,40 @@
+
+
+////////////////////////////////////////////////////////////////
+///////////// DO NOT MODIFY BELOW INCLUDE ORDER ////////////////
+////////////////////////////////////////////////////////////////
+
+// 1: Include global config
+@import "../../../config";
+////////////////////////////////////////////////////////////////
+///////////// DO NOT MODIFY ABOVE INCLUDE ORDER ////////////////
+////////////////////////////////////////////////////////////////
+
+body {
+    transform-origin: left top;
+    margin: 0;
+    width: 4000px;
+    height: 2000px;
+    overflow: hidden;
+    background-color: kt-state-color(light);
+    div {
+        width: 2000px;
+        height: 1000px;
+        float: left;
+        text-align: center;
+        font-size: 50px;
+        color: kt-state-color(light);
+    }
+    .div1 {
+        background-color: kt-state-color(primary);
+    }
+    .div2 {
+        background-color: kt-state-color(info);
+    }
+    .div3 {
+        background-color: kt-state-color(warning);
+    }
+    .div4 {
+        background-color: kt-state-color(danger);
+    }
+}
