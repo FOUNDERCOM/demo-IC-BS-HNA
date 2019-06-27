@@ -116,12 +116,12 @@ angular.module('WebAppICBS').controller('MapCtrl', ['$rootScope', '$scope', func
                 }
             }
         });
-        //var tileset = new Cesium.Cesium3DTileset({ url: "http://172.18.117.97:8080/pgis/data/obq/hn1/tileset.json" });
-        var tileset = new Cesium.Cesium3DTileset({ url: "http://192.168.43.81:9002/api/folder/1c0a82b18ec84fe78005728503b4b8cc/tileset.json" });
+        var tileset = new Cesium.Cesium3DTileset({ url: "http://172.18.117.97:8080/pgis/data/obq/hn1/tileset.json" });
+        // var tileset = new Cesium.Cesium3DTileset({ url: "http://192.168.43.81:9002/api/folder/1c0a82b18ec84fe78005728503b4b8cc/tileset.json" });
         scene.primitives.add(tileset);
         scene.camera.flyTo({
-            // destination:Cesium.Cartesian3.fromDegrees(111.341764,25.269629, 150),
-            destination:Cesium.Cartesian3.fromDegrees(114.06121924659066,30.30007649989971, 200),
+            destination:Cesium.Cartesian3.fromDegrees(111.341764,25.269629, 150),
+            // destination:Cesium.Cartesian3.fromDegrees(114.06121924659066,30.30007649989971, 200),
             orientation : {
                 heading : Cesium.Math.toRadians(0.0),
                 pitch : Cesium.Math.toRadians(-25.0),
