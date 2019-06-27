@@ -137,10 +137,16 @@
                     "src": {
                         "styles": [
                             "{$config.path.src}/sass/theme/demos/demo-lab/style.scss"
+                        ],
+                        "scripts": [
+                            "{$config.path.src}/js/theme/core/*.js",
+                            "{$config.path.src}/js/theme/core/base/**/*.js",
+                            "{$config.path.src}/js/theme/core/**/*.js"
                         ]
                     },
                     "bundle": {
-                        "styles": "{$config.dist}/css/demo-lab/style.bundle.css"
+                        "styles": "{$config.dist}/css/demo-lab/style.bundle.css",
+                        "scripts": "{$config.dist}/js/demo-lab/scripts.bundle.js"
                     }
                 },
                 "pages": {
