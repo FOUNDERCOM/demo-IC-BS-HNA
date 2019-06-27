@@ -1,0 +1,140 @@
+////////////////////////////////////////////////////////////////
+///////////// DO NOT MODIFY BELOW INCLUDE ORDER ////////////////
+////////////////////////////////////////////////////////////////
+// 1: Include global config
+@import "../../../config";
+// 2: Include demo config (that overrides the above global config)
+@import "../config";
+////////////////////////////////////////////////////////////////
+///////////// DO NOT MODIFY ABOVE INCLUDE ORDER ////////////////
+////////////////////////////////////////////////////////////////
+
+body {
+    width: 1920px;
+    height: 1080px;
+
+    transform-origin: left top;
+    margin: 0;
+    overflow: hidden;
+    background-color: kt-state-color(dark);
+}
+.bs-layout-with-map {
+    position: absolute;
+    top: 0;
+}
+.bs-widget {
+    pointer-events: auto;
+}
+.bs-layout-container {
+    pointer-events: none;
+    width: 1920px;
+    height: 1080px;
+    transform-origin: left top;
+    margin: 0;
+    overflow: hidden;
+
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+    .bs-layout-header {
+        width: calc(100%);
+        height: 85px;
+        margin: 0;
+
+        background-color: kt-state-color(info);
+
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+
+        > .bs-title {
+            margin: 25px auto 0 25px;
+
+            height: 50px;
+            width: 600px;
+
+            background-color: kt-state-color(warning);
+        }
+        > .bs-info {
+            margin: 25px 25px 0 0;
+
+            height: 50px;
+            width: 375px;
+
+            background-color: kt-state-color(warning);
+        }
+    }
+
+    .bs-layout-aside-left {
+        margin-right: auto;
+
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        -webkit-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+
+        > .bs-widget-1 {
+            margin: 10px 0 0 25px;
+            width: 335px;
+            height: 200px;
+            background-color: kt-state-color(success);
+        }
+        > .bs-widget-2 {
+            margin: 10px 0 0 25px;
+            width: 335px;
+            height: 200px;
+            background-color: kt-state-color(success);
+        }
+        > .bs-widget-3 {
+            margin: 10px 0 0 25px;
+            width: 335px;
+            height: 360px;
+            background-color: kt-state-color(success);
+        }
+        > .bs-widget-4 {
+            margin: 10px 0 25px 25px;
+            width: 1400px;
+            height: 170px;
+            background-color: kt-state-color(primary);
+        }
+    }
+
+    .bs-layout-aside-right {
+        margin: 10px 25px 25px 0;
+        width: 375px;
+        height: 960px;
+
+        > .bs-widget-5 {
+            margin: 0;
+            width: 375px;
+            height: 175px;
+            background-color: kt-state-color(danger);
+        }
+        > .bs-widget-6 {
+            margin-top: 10px;
+            width: 375px;
+            height: 190px;
+            background-color: kt-state-color(danger);
+        }
+        > .bs-widget-7 {
+            margin-top: 10px;
+            width: 375px;
+            height: 575px;
+            background-color: kt-state-color(danger);
+        }
+    }
+}
+
+#bs-map {
+    width: 1920px;
+    height: 1080px;
+}

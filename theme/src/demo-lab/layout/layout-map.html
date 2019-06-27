@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <!--begin::Base Path (base relative path for assets of this page) -->
+        <base href="../../">
+        <!--end::Base Path -->
+
+        <meta charset="UTF-8">
+        <title>Test</title>
+        <meta name="description" content="Updates and statistics">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!--begin::Global Theme Styles(used by all pages) -->
+        <link href="./assets/vendors/global/vendors.bundle.css" rel="stylesheet" type="text/css" />
+        <link href="./assets/css/demo-lab/style.bundle.css" rel="stylesheet" type="text/css" />
+        <!--end::Global Theme Styles -->
+
+        <!--begin::Page Custom Styles(used by this page) -->
+        <link href="./assets/css/demo-lab/irregular-border/irregular-border.css" rel="stylesheet" type="text/css" />
+        <link href="./assets/css/demo-lab/modal/modal.css" rel="stylesheet" type="text/css" />
+        <link href="./assets/css/demo-lab/layout/layout.css" rel="stylesheet" type="text/css" />
+        <!--end::Page Custom Styles -->
+
+        <link rel="shortcut icon" href="./assets/media/logos/favicon.ico" />
+    </head>
+    <body>
+        <div id="bs-map"></div>
+        <div class="bs-layout-container bs-layout-with-map">
+            <div class="bs-layout-header">
+                <div class="bs-title bs-widget"></div>
+                <div class="bs-info bs-widget"></div>
+            </div>
+            <div class="bs-layout-aside-left">
+                <div class="bs-widget-1 bs-widget">
+
+                    <button type="button" class="btn btn-bold btn-label-tech btn-sm" data-toggle="modal" data-target="#kt_modal_1">Launch Modal</button>
+
+                    <!--begin::Modal-->
+                    <div class="modal fade" id="kt_modal_1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                            <div class="modal-content fd-ireg-border-box">
+                                <div class="fd-ireg-border fd-ireg-border-top"></div>
+                                <div class="fd-ireg-border fd-ireg-border-top-light"></div>
+                                <div class="fd-ireg-border fd-ireg-border-bottom"></div>
+                                <div class="fd-ireg-border-bg"></div>
+                                <div class="fd-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-outline-tech" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-tech">Save changes</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--end::Modal-->
+                </div>
+                <div class="bs-widget-2 bs-widget"></div>
+                <div class="bs-widget-3 bs-widget"></div>
+                <div class="bs-widget-4 bs-widget"></div>
+            </div>
+            <div class="bs-layout-aside-right">
+                <div class="bs-widget-5 bs-widget"></div>
+                <div class="bs-widget-6 bs-widget"></div>
+                <div class="bs-widget-7 bs-widget"></div>
+            </div>
+
+        </div>
+
+        <!--begin::Page Vendors(used by this page) -->
+        <script src="./assets/vendors/global/Cesium/Cesium.js" type="text/javascript"></script>
+        <!--end::Page Vendors -->
+
+        <!--begin::Global Theme Bundle(used by all pages) -->
+        <script src="./assets/vendors/global/vendors.bundle.js" type="text/javascript"></script>
+        <!--end::Global Theme Bundle -->
+
+        <!--begin::Page Scripts(used by this page) -->
+        <script src="./assets/js/demo-lab/layout/autosize.js" type="text/javascript"></script>
+        <script src="./assets/js/demo-lab/layout/map.js" type="text/javascript"></script>
+        <!--end::Page Scripts -->
+    </body>
+</html>
