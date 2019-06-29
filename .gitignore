@@ -67,5 +67,6 @@ typings/
 
 # dist
 theme/dist
+lab/**/dist
 # third part js lib
 Cesium
