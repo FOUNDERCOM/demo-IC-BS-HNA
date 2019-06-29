@@ -2,6 +2,7 @@
 const path = require('path')
 const utils = require('./utils')
 const webpack = require('webpack')
+const config = require('../config')
 const merge = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.base.conf')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
@@ -10,24 +11,26 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
+const env = require('../config/prod.env')
+
 const webpackConfig = merge(baseWebpackConfig, {
   module: {
     rules: utils.styleLoaders({
-      sourceMap: true,
+      sourceMap: config.build.productionSourceMap,
       extract: true,
       usePostCSS: true
     })
   },
-  devtool: true ? '#source-map' : false,
+  devtool: config.build.productionSourceMap ? config.build.devtool : false,
   output: {
-    path: path.resolve(__dirname, '../dist'),
+    path: config.build.assetsRoot,
     filename: utils.assetsPath('js/[name].[chunkhash].js'),
     chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
   },
   plugins: [
     // http://vuejs.github.io/vue-loader/en/workflow/production.html
     new webpack.DefinePlugin({
-      'process.env': {NODE_ENV: '"production"'}
+      'process.env': env
     }),
     new UglifyJsPlugin({
       uglifyOptions: {
@@ -35,7 +38,7 @@ const webpackConfig = merge(baseWebpackConfig, {
           warnings: false
         }
       },
-      sourceMap: true,
+      sourceMap: config.build.productionSourceMap,
       parallel: true
     }),
     // extract css into its own file
@@ -50,7 +53,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     // Compress extracted CSS. We are using this plugin so that possible
     // duplicated CSS from different components can be deduped.
     new OptimizeCSSPlugin({
-      cssProcessorOptions: true
+      cssProcessorOptions: config.build.productionSourceMap
         ? { safe: true, map: { inline: false } }
         : { safe: true }
     }),
@@ -58,7 +61,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     // you can customize output by editing /index.html
     // see https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
-      filename: path.resolve(__dirname, '../dist/index.html'),
+      filename: config.build.index,
       template: 'index.html',
       inject: true,
       minify: {
@@ -109,7 +112,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     new CopyWebpackPlugin([
       {
         from: path.resolve(__dirname, '../static'),
-        to: 'static',
+        to: config.build.assetsSubDirectory,
         ignore: ['.*']
       }
     ])
