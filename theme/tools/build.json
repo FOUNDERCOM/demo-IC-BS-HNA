@@ -90,6 +90,12 @@
                                 "{$config.path.node_modules}/bootstrap-switch/dist/js/bootstrap-switch.js",
                                 "{$config.path.src}/js/vendors/bootstrap-switch.init.js"
                             ]
+                        },
+                        "counterup": {
+                            "scripts": [
+                                "{$config.path.node_modules}/waypoints/lib/jquery.waypoints.min.js",
+                                "{$config.path.node_modules}/counterup/jquery.counterup.min.js"
+                            ]
                         }
                     }
                 },
