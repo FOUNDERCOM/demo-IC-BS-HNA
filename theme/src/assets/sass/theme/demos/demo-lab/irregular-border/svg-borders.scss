@@ -1,0 +1,28 @@
+////////////////////////////////////////////////////////////////
+///////////// DO NOT MODIFY BELOW INCLUDE ORDER ////////////////
+////////////////////////////////////////////////////////////////
+// 1: Include global config
+@import "../../../config";
+// 2: Include demo config (that overrides the above global config)
+@import "../config";
+
+////////////////////////////////////////////////////////////////
+///////////// DO NOT MODIFY ABOVE INCLUDE ORDER ////////////////
+////////////////////////////////////////////////////////////////
+
+body {
+    background-color: kt-state-color(dark);
+}
+.test-box {
+    width: 600px;
+    height: 400px;
+    svg {
+        position: absolute;
+
+        line {
+            stroke-width: 2px;
+            stroke: #33ffff;
+            fill: none;
+        }
+    }
+}

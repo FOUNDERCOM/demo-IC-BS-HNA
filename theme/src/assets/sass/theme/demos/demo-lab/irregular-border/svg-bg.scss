@@ -1,0 +1,104 @@
+////////////////////////////////////////////////////////////////
+///////////// DO NOT MODIFY BELOW INCLUDE ORDER ////////////////
+////////////////////////////////////////////////////////////////
+// 1: Include global config
+@import "../../../config";
+// 2: Include demo config (that overrides the above global config)
+@import "../config";
+
+////////////////////////////////////////////////////////////////
+///////////// DO NOT MODIFY ABOVE INCLUDE ORDER ////////////////
+////////////////////////////////////////////////////////////////
+
+body {
+    background-color: kt-state-color(info);
+}
+
+.test-box {
+    width: 300px;
+    height: 460px;
+    position: relative;
+    background: rgba(255,255,255,1);
+    cursor: pointer;
+    color: #2c3e50;
+    box-shadow: inset 0 0 0 3px #2c3e50;
+    transition: background 0.4s 0.5s;
+    text-align: center;
+}
+
+.test-box:hover {
+    background: rgba(255,255,255,0);
+    transition-delay: 0s;
+}
+
+.test-box h3 {
+    font-family: "Ruthie", cursive;
+    font-size: 180px;
+    line-height: 370px;
+    margin: 0;
+    font-weight: 400;
+    width: 100%;
+}
+
+.test-box span {
+    display: block;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 13px;
+    padding: 5px;
+}
+
+.test-box h3,
+.test-box span {
+    transition: color 0.4s 0.5s;
+}
+
+.test-box:hover h3,
+.test-box:hover span {
+    color: #fff;
+    transition-delay: 0s;
+}
+
+.test-box svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.test-box svg line {
+    stroke-width: 2px;
+    stroke: #33ffff;
+    fill: none;
+    transition: all .8s ease-in-out;
+}
+
+.test-box:hover svg line {
+    transition-delay: 0.1s;
+}
+
+.test-box svg line.top,
+.test-box svg line.bottom {
+    stroke-dasharray: 330 240;
+}
+
+.test-box svg line.left,
+.test-box svg line.right {
+    stroke-dasharray: 490 400;
+}
+
+.test-box:hover svg line.top {
+    transform: translateX(-600px);
+}
+
+.test-box:hover svg line.bottom {
+    transform: translateX(600px);
+}
+
+.test-box:hover svg line.left {
+    transform: translateY(920px);
+}
+
+.test-box:hover svg line.right {
+    transform: translateY(-920px);
+}
