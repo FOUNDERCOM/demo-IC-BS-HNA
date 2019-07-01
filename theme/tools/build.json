@@ -107,13 +107,15 @@
                 }
             },
             "custom": {
-                "src": {
-                    "resources": [
-                        "{$config.path.node_modules}/cesium/Build/Cesium/**/*"
-                    ]
-                },
-                "output": {
-                    "resources": "{$config.dist}/vendors/global/Cesium/"
+                "cesium": {
+                    "src": {
+                        "resources": [
+                            "{$config.path.node_modules}/cesium/Build/Cesium/**/*"
+                        ]
+                    },
+                    "output": {
+                        "resources": "{$config.dist}/vendors/global/Cesium/"
+                    }
                 }
             }
         },
