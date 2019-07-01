@@ -45,14 +45,15 @@ var ezMap = {
             style: 'default',
             imageSRC: '/images/shiliang.png'
         }],*/
-			["TDT", "http://39.104.61.84:9001/EzServer7/Maps/sltdt", {
-				crs: '4326',
-				wrapX: false,
-				imageSRC: 'http://39.104.61.84:9001/images/EzServerClient/shiliang.png',
-				customOpts:{
-				print:true
-				}
-			}],
+			["TDT", "http://172.25.16.102:8080/EzServer7/WMTS?SERVICE=WMTS", {
+                type: 'wmts',
+                crs: '4326',
+                wrapX: false,
+                layer:'yxtdt',
+                matrixSet:'c',
+                format:'tile',
+                style: 'default',
+            }],
     /*    ['TDT', 'http://172.18.117.63:8082/EzServer7/Maps/sltdt', {
             crs: '4326',
             wrapX: false,
