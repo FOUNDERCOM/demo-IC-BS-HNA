@@ -10,19 +10,94 @@
 ///////////// DO NOT MODIFY ABOVE INCLUDE ORDER ////////////////
 ////////////////////////////////////////////////////////////////
 
+$fd-ireg-content-margin: 10px;
 body {
     background-color: kt-state-color(dark);
 }
-.test-box {
+
+.test {
     width: 600px;
     height: 400px;
+}
+
+.fd-svg-border {
+    .fd-content {
+        margin: $fd-ireg-content-margin;
+        padding: 5px;
+        height: calc(100% - 20px);
+        width: calc(100% - 20px);
+    }
+}
+
+.fd-svg-border-tpl-1 {
     svg {
         position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
 
-        line {
-            stroke-width: 2px;
-            stroke: #33ffff;
-            fill: none;
+        .fd-border-bold {
+            stroke-width: 6;
+            stroke: kt-state-color(tech);
         }
+        .fd-border-light {
+            stroke-width: 2;
+            stroke: kt-state-color(tech);
+        }
+        .fd-bg {
+            stroke-width: 2;
+            stroke: kt-state-color(tech);
+            fill: kt-state-color(dark);
+            opacity: 0.75;
+        }
+    }
+}
+
+.fd-svg-border-tpl-2 {
+    position: relative;
+    svg {
+        position: absolute;
+        z-index: -1;
+
+        .fd-border-bold {
+            stroke-width: 6;
+            stroke: kt-state-color(tech);
+        }
+        .fd-border-light {
+            stroke-width: 2;
+            stroke: kt-state-color(tech);
+        }
+        .fd-bg {
+            stroke-width: 2;
+            stroke: kt-state-color(tech);
+            fill: kt-state-color(dark);
+            opacity: 0.75;
+        }
+    }
+    .fd-border-top-left {
+        width: 30px;
+        height: 80px;
+        top: 0;
+        left: 0;
+    }
+    .fd-border-top-right {
+        width: 150px;
+        height: 30px;
+        top: 0;
+        right: 0;
+    }
+    .fd-border-bottom-left {
+        width: 30px;
+        height: 30px;
+        bottom: 0;
+        left: 0;
+    }
+    .fd-border-bottom-right {
+        width: 30px;
+        height: 30px;
+        bottom: 0;
+        right: 0;
     }
 }

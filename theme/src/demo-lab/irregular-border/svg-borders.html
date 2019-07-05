@@ -11,24 +11,112 @@
         <meta name="description" content="Updates and statistics">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+        <!--begin::Global Theme Styles(used by all pages) -->
+        <link href="./assets/vendors/global/vendors.bundle.css" rel="stylesheet" type="text/css" />
+        <link href="./assets/css/demo-lab/style.bundle.css" rel="stylesheet" type="text/css" />
+        <!--end::Global Theme Styles -->
+
         <!--begin::Page Custom Styles(used by this page) -->
         <link href="./assets/css/demo-lab/irregular-border/svg-borders.css" rel="stylesheet" type="text/css"/>
+        <link href="./assets/css/demo-lab/modal/modal.css" rel="stylesheet" type="text/css" />
         <!--end::Page Custom Styles -->
-
-        <!--begin::Global Theme Styles(used by all pages) -->
-        <link href="./assets/vendors/global/vendors.bundle.css" rel="stylesheet" type="text/css"/>
-        <!--end::Global Theme Styles -->
 
         <link rel="shortcut icon" href="./assets/media/logos/favicon.ico"/>
     </head>
     <body>
-        <div class="test-box fd-tech-border-1">
-            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-                <line class="top" x1="0" y1="0" x2="900" y2="0"/>
-                <line class="left" x1="0" y1="460" x2="0" y2="-920"/>
-                <line class="bottom" x1="300" y1="460" x2="-600" y2="460"/>
-                <line class="right" x1="300" y1="0" x2="300" y2="1380"/>
+        <div class="test fd-svg-border fd-svg-border-tpl-2">
+            <svg class="fd-border-top-left" xmlns="http://www.w3.org/2000/svg">
+                <line class="fd-border-bold" x1="0" y1="3" x2="30" y2="3"></line>
+                <line class="fd-border-bold" x1="3" y1="0" x2="3" y2="80"></line>
+            </svg>
+            <svg class="fd-border-top-right" xmlns="http://www.w3.org/2000/svg">
+                <line class="fd-border-bold" x1="150" y1="3" x2="120" y2="3"></line>
+                <line class="fd-border-bold" x1="147" y1="0" x2="147" y2="30"></line>
+                <line class="fd-border-light" x1="150" y1="3" x2="0" y2="3"></line>
+            </svg>
+            <svg class="fd-border-bottom-right" xmlns="http://www.w3.org/2000/svg">
+                <line class="fd-border-bold" x1="30" y1="27" x2="0" y2="27"></line>
+                <line class="fd-border-bold" x1="27" y1="30" x2="27" y2="0"></line>
+            </svg>
+            <svg class="fd-border-bottom-left" xmlns="http://www.w3.org/2000/svg">
+                <line class="fd-border-bold" x1="0" y1="27" x2="30" y2="27"></line>
+                <line class="fd-border-bold" x1="3" y1="30" x2="3" y2="0"></line>
             </svg>
         </div>
+        <div class="test fd-svg-border fd-svg-border-tpl-1" style="display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg">
+                <!-- bold border clockwise order -->
+                <!-- top left to right -->
+                <line class="fd-border-bold" x1="0" y1="3" x2="30" y2="3"></line>
+                <!-- top right to left -->
+                <line class="fd-border-bold" x1="600" y1="3" x2="570" y2="3"></line>
+                <!-- right top to bottom -->
+                <line class="fd-border-bold" x1="597" y1="3" x2="597" y2="30"></line>
+                <!-- right bottom to top -->
+                <line class="fd-border-bold" x1="597" y1="400" x2="597" y2="300"></line>
+                <!-- bottom right to left -->
+                <line class="fd-border-bold" x1="600" y1="397" x2="350" y2="397"></line>
+                <!-- bottom left to right -->
+                <line class="fd-border-bold" x1="0" y1="397" x2="30" y2="397"></line>
+                <!-- left bottom to top -->
+                <line class="fd-border-bold" x1="3" y1="400" x2="3" y2="370"></line>
+                <!-- left top to bottom -->
+                <line class="fd-border-bold" x1="3" y1="0" x2="3" y2="80"></line>
+
+                <!-- light bolder -->
+                <line class="fd-border-light" x1="600" y1="3" x2="450" y2="3"></line>
+
+                <!-- background -->
+                <rect class="fd-bg" fill="#000000" height="380" width="580" y="10" x="10"/>
+            </svg>
+            <div class="fd-content">
+                <button type="button" class="btn btn-bold btn-label-tech btn-sm" data-toggle="modal" data-target="#kt_modal_1">Launch Modal</button>
+            </div>
+            <!--begin::Modal-->
+            <div class="modal fade" id="kt_modal_1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                    <div class="modal-content fd-svg-border fd-svg-border-tpl-2">
+                        <svg class="fd-border-top-left" xmlns="http://www.w3.org/2000/svg">
+                            <line class="fd-border-bold" x1="0" y1="3" x2="30" y2="3"></line>
+                            <line class="fd-border-bold" x1="3" y1="0" x2="3" y2="80"></line>
+                        </svg>
+                        <svg class="fd-border-top-right" xmlns="http://www.w3.org/2000/svg">
+                            <line class="fd-border-bold" x1="150" y1="3" x2="120" y2="3"></line>
+                            <line class="fd-border-bold" x1="147" y1="0" x2="147" y2="30"></line>
+                            <line class="fd-border-light" x1="150" y1="3" x2="0" y2="3"></line>
+                        </svg>
+                        <svg class="fd-border-bottom-right" xmlns="http://www.w3.org/2000/svg">
+                            <line class="fd-border-bold" x1="30" y1="27" x2="0" y2="27"></line>
+                            <line class="fd-border-bold" x1="27" y1="30" x2="27" y2="0"></line>
+                        </svg>
+                        <svg class="fd-border-bottom-left" xmlns="http://www.w3.org/2000/svg">
+                            <line class="fd-border-bold" x1="0" y1="27" x2="30" y2="27"></line>
+                            <line class="fd-border-bold" x1="3" y1="30" x2="3" y2="0"></line>
+                        </svg>
+                        <div class="fd-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-tech" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-tech">Save changes</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!--end::Modal-->
+        </div>
+
+        <!--begin::Global Theme Bundle(used by all pages) -->
+        <script src="./assets/vendors/global/vendors.bundle.js" type="text/javascript"></script>
+        <!--end::Global Theme Bundle -->
     </body>
 </html>

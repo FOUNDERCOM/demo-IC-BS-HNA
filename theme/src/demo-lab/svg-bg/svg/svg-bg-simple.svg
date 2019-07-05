@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+
+    <!-- bold border clockwise order -->
+    <!-- top left to right -->
+    <line id="top-left"/>
+    <!-- top right to left -->
+    <line id="top-right"/>
+    <!-- right top to bottom -->
+    <line id="right-top"/>
+    <!-- right bottom to top -->
+    <line id="right-bottom"/>
+    <!-- bottom right to left -->
+    <line id="bottom-right"/>
+    <!-- bottom left to right -->
+    <line id="bottom-left"/>
+    <!-- left bottom to top -->
+    <line id="left-bottom"/>
+    <!-- left top to bottom -->
+    <line id="left-top"/>
+
+    <!-- light bolder -->
+    <line id="border-light" class="fd-border-light"/>
+
+    <!-- background -->
+    <rect id="bg" opacity="0.75" stroke-width="2" stroke="#33ffff" fill="#000000" y="10" x="10"/>
+
+    <script type="text/ecmascript" xlink:href="/assets/js/demo-lab/svg-bg/svg-bg-simple.js"/>
+</svg>
