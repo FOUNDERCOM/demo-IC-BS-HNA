@@ -3,143 +3,14 @@
     src: url('./../../media/fonts/DSEG7ClassicMini-Bold.woff.ttf');
 }
 
-.bs-body {
-    transform-origin: left top;
-    margin: 0;
+.fd-body {
     width: 1960px;
     height: 1080px;
+
+    transform-origin: left top;
+    margin: 0;
     overflow: hidden;
     background-image: url("./../../media/layouts/bg-all-temp.png");
-    -webkit-background-size: 1920px 1080px;
-    background-size: 1920px 1080px;
-
-    #layout {
-        width: 1920px;
-        height: 1080px;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-}
-
-// 异形border
-.bs-exchange-border-box {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-
-    .bs-default-title-left {
-        width: 60% !important;
-        left: 10%;
-    }
-    .bs-default-title-right {
-        right: 10%;
-        width: 60% !important;
-    }
-    .bs-default-title {
-        position: absolute;
-        top: 10px;
-        width: 100%;
-        height: 35px;
-        text-align: center;
-        color: kt-state-color(tech);
-        font-size: 20px;
-        font-family: "微软雅黑", serif;
-        font-weight: 900;
-        background-image: url("./../../media/layouts/default-title-bg.png");
-        background-size: auto 60%;
-        background-repeat: no-repeat;
-        background-position: bottom center;
-    }
-
-    .bs-ex-border {
-        border: 0 !important;
-        position: absolute;
-        width: 100%;
-        height: 50%;
-    }
-    .bs-ex-border-top-light {
-        top: 0;
-        &::before {
-            position: absolute;
-            top: 2px;
-            right: 0;
-            content: '';
-            display: block;
-            width: 100px;
-            height: 10px;
-            border-top: 2px solid kt-state-color(tech);;
-        }
-    }
-    .bs-ex-border-top {
-        top: 0;
-        &::before {
-            border-top-left-radius: 5px;
-            position: absolute;
-            top: 0;
-            left: 0;
-            content: '';
-            display: block;
-            width: 30px;
-            height: 100px;
-            border-left: $bs-abnormal-border-cfg;
-            border-top: $bs-abnormal-border-cfg;
-        }
-        &::after {
-            border-top-right-radius: 5px;
-            position: absolute;
-            top: 0;
-            right: 0;
-            content: '';
-            display: block;
-            width: 30px;
-            height: 15px;
-            border-right: $bs-abnormal-border-cfg;
-            border-top: $bs-abnormal-border-cfg;
-        }
-    }
-
-    .bs-ex-border-bottom {
-        bottom: 0;
-        &::before {
-            border-bottom-left-radius: 5px;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            content: '';
-            display: block;
-            width: 15px;
-            height: 15px;
-            border-left: $bs-abnormal-border-cfg;
-            border-bottom: $bs-abnormal-border-cfg;
-        }
-        &::after {
-            border-bottom-right-radius: 5px;
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            content: '';
-            display: block;
-            width: 150px;
-            height: 50px;
-            border-right: $bs-abnormal-border-cfg;
-            border-bottom: $bs-abnormal-border-cfg;
-        }
-    }
-
-    .bs-ex-border-bg {
-        position: absolute;
-        top: 9px;
-        left: 9px;
-
-        box-sizing: unset;
-
-        height: calc(100% - 22px);
-        width: calc(100% - 22px);
-        overflow: hidden;
-        background-color: kt-get($kt-state-colors, light, inverse);
-        border: 2px solid kt-state-color(tech);
-        opacity: $bs-dark-background-opacity;
-    }
+    -webkit-background-size: contain;
+    background-size: contain;
 }

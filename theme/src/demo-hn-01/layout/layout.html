@@ -1,23 +1,15 @@
-<!-- 标题 -->
-<div id="bs-title" ng-include="'./title/title.html'"></div>
-<!-- 时间以及天气 -->
-<div id="bs-date-weather" ng-include="'./date-weather/main.html'"></div>
-<!-- 旋转地球 装饰 -->
-<div id="bs-earth" ng-include="'./base-data/earth.html'"></div>
-<!-- 基础信息统计 人地事物组织 -->
-<div id="bs-base-data" ng-include="'./base-data/main.html'"></div>
-<!-- 预警统计 -->
-<div id="bs-alarm-statistics" ng-include="'./alarm-statistics/main.html'"></div>
-<!-- 重点人统计 -->
-<div id="bs-dangerous-person" ng-include="'./dangerous-person/main.html'"></div>
-<!-- 基础数据 -->
-<div id="bs-base-data-static" ng-include="'./base-data-static/main.html'"></div>
-<!-- 重点单位 行业场所 -->
-<div id="bs-important-area" ng-include="'./important-area/main.html'"></div>
-<!-- 预警与任务 -->
-<div id="bs-tasks" ng-include="'./tasks/main.html'"></div>
-<!-- 任务-按时间统计 -->
-<div id="bs-alarm-statistics-period" ng-include="'./alarm-statistics-period/main.html'" ng-controller="AlarmStatisticsCtrl"></div>
-<!-- 地图 -->
-<div id="bs-map-mask"></div>
-<div id="bs-map" ng-controller="MapCtrl" data-ng-init="initMap()"></div>
+<div class="fd-layout-header">
+    <div class="fd-widget-1 fd-widget" ng-include="'./demo-hn-01/title/title.html'"></div>
+    <div class="fd-widget-2 fd-widget" ng-include="'./demo-hn-01/date-weather/main.html'"></div>
+</div>
+<div class="fd-layout-aside-left">
+    <div class="fd-widget-3 fd-widget"></div>
+    <div class="fd-widget-4 fd-widget"></div>
+    <div class="fd-widget-5 fd-widget"></div>
+    <div class="fd-widget-6 fd-widget"></div>
+</div>
+<div class="fd-layout-aside-right">
+    <div class="fd-widget-7 fd-widget"></div>
+    <div class="fd-widget-8 fd-widget"></div>
+    <div class="fd-widget-9 fd-widget"></div>
+</div>

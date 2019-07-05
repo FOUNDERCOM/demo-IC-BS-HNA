@@ -27,15 +27,18 @@
 // 6: Body
 @import "base";
 
+// 7: layout
+@import "layout";
+
 // 7: Widgets
 @import "title";
-@import "basedata";
-@import "alarm-statistics";
-@import "dangerous-person";
-@import "base-data-static";
-@import "dangerous-person";
-@import "important_area";
-@import "tasks";
-@import "alarm-statistics-period";
 @import "date-weather";
-@import "map";
+//@import "basedata";
+//@import "alarm-statistics";
+//@import "dangerous-person";
+//@import "base-data-static";
+//@import "dangerous-person";
+//@import "important_area";
+//@import "tasks";
+//@import "alarm-statistics-period";
+//@import "map";

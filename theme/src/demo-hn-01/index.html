@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="WebAppICBS">
     <head>
+
         <!--begin::Base Path (base relative path for assets of this page) -->
+        <base href="../">
+
+        <!--end::Base Path -->
 
         <meta charset="UTF-8">
         <title>武汉 | 汉南智慧社区警务大屏</title>
@@ -9,25 +13,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <!--begin::Global Theme Styles(used by all pages) -->
-        <link href="./../assets/vendors/global/vendors.bundle.css" rel="stylesheet" type="text/css" />
-        <link href="./../assets/css/demo-hn-01/style.bundle.css" rel="stylesheet" type="text/css" />
+        <link href="./assets/vendors/global/vendors.bundle.css" rel="stylesheet" type="text/css" />
+        <link href="./assets/css/demo-hn-01/style.bundle.css" rel="stylesheet" type="text/css" />
 
         <!--end::Global Theme Styles -->
 
-        <link rel="shortcut icon" href="./../assets/media/logos/favicon.ico" />
+        <link rel="shortcut icon" href="./assets/media/logos/favicon.ico" />
     </head>
-    <body class="bs-body">
+    <body class="fd-body">
 
-        <div id="layout" ng-include="'./layout/layout.html'"></div>
+        <div class="fd-map"></div>
+        <div class="fd-layout-container" ng-include="'./demo-hn-01/layout/layout.html'"></div>
 
 
         <!--begin::Page Vendors(used by this page) -->
-        <script src="./../assets/vendors/global/Cesium/Cesium.js" type="text/javascript"></script>
+        <script src="./assets/vendors/global/Cesium/Cesium.js" type="text/javascript"></script>
         <!--end::Page Vendors -->
 
         <!--begin::Global Theme Bundle(used by all pages) -->
-        <script src="./../assets/vendors/global/vendors.bundle.js" type="text/javascript"></script>
-        <script src="./../assets/js/demo-hn-01/scripts.bundle.js" type="text/javascript"></script>
+        <script src="./assets/vendors/global/vendors.bundle.js" type="text/javascript"></script>
+        <script src="./assets/js/demo-hn-01/scripts.bundle.js" type="text/javascript"></script>
         <!--end::Global Theme Bundle -->
     </body>
 </html>

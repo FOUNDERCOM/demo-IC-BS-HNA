@@ -60,3 +60,62 @@
         }
     }
 }
+.fd-date-weather {
+
+    width: 375px;
+    height: 50px;
+    color: lighten(kt-state-color(tech), 30%);
+
+    div {
+        float: left;
+    }
+    .separator {
+        margin: 5px 20px;
+        height: 35px;
+        width: 1px;
+        background: -webkit-gradient(linear, 0 5, 100% 100%, from(lighten(kt-state-color(tech), 30%)), to(lighten(kt-state-color(tech), 60%)));
+    }
+
+    .fd-date {
+        margin-left: 10px;
+        text-align: right;
+        .fd-date-time {
+            font-family: $bs-number-font-family;
+            font-size: 18px;
+        }
+        .fd-date-day {
+            float: none;
+            font-family: "微软雅黑", serif;
+            font-size: 8px;
+        }
+    }
+
+    .bs-area {
+        margin-top: -5px;
+        font-size: 32px;
+        font-family: "微软雅黑", serif;
+        font-weight: 900;
+    }
+    .bs-weather {
+        .bs-icon {
+            &::before {
+                font-size: 32px;
+            }
+        }
+        .bs-temperature {
+            font-family: $bs-number-font-family;
+            font-size: 28px;
+        }
+        .bs-temperature-o {
+            font-family: $bs-number-font-family;
+            font-size: 10px;
+            vertical-align: top;
+        }
+        .bs-weather-cn {
+            font-size: 14px;
+            font-family: "微软雅黑", serif;
+            vertical-align: bottom;
+            margin-left: -10px;
+        }
+    }
+}

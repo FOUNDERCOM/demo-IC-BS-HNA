@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     version="1.1"
+     width="600" height="50">
+    <!-- four corner -->
+    <line stroke-width="6" stroke="#33ffff" x1="3" y1="3" x2="10" y2="3"/>
+    <line stroke-width="6" stroke="#33ffff" x1="3" y1="3" x2="3" y2="10"/>
+    <circle cx="3" cy="3" r="3" fill="#33ffff"/>
+
+    <line stroke-width="6" stroke="#33ffff" x1="597" y1="3" x2="590" y2="3"/>
+    <line stroke-width="6" stroke="#33ffff" x1="597" y1="3" x2="597" y2="10"/>
+    <circle cx="597" cy="3" r="3" fill="#33ffff"/>
+
+    <line stroke-width="6" stroke="#33ffff" x1="597" y1="47" x2="597" y2="40"/>
+    <line stroke-width="6" stroke="#33ffff" x1="597" y1="47" x2="590" y2="47"/>
+    <circle cx="597" cy="47" r="3" fill="#33ffff"/>
+
+    <line stroke-width="6" stroke="#33ffff" x1="3" y1="47" x2="10" y2="47"/>
+    <line stroke-width="6" stroke="#33ffff" x1="3" y1="47" x2="3" y2="40"/>
+    <circle cx="3" cy="47" r="3" fill="#33ffff"/>
+
+    <!-- line light -->
+    <line stroke-width="2" stroke="#33ffff" x1="3" y1="3" x2="597" y2="3"/>
+    <line stroke-width="2" stroke="#33ffff" x1="3" y1="47" x2="597" y2="47"/>
+
+    <!-- bg -->
+    <rect x="6" y="6" width="588" height="38" fill="#000000" fill-opacity="0.75"/>
+</svg>
