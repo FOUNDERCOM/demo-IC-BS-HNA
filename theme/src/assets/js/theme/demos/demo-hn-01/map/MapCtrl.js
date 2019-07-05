@@ -40,7 +40,7 @@ angular.module('WebAppICBS').controller('MapCtrl', ['$rootScope', '$scope', func
         //     style: 'default'
         // });
         //影像地图
-            wmtslayer = new Ez.TileLayer.WMTS('test', 'http://172.25.16.102:8080/EzServer7/WMTS?SERVICE=WMTS', {
+            wmtslayer = new Ez.TileLayer.WMTS('test', 'http://39.104.20.126:8888/EzServer7/WMTS?SERVICE=WMTS', {
             type: 'wmts',
             crs: '4326',
             wrapX: false,
@@ -118,7 +118,21 @@ angular.module('WebAppICBS').controller('MapCtrl', ['$rootScope', '$scope', func
         });
         // var tileset = new Cesium.Cesium3DTileset({ url: "http://172.18.117.97:8080/pgis/data/obq/hn1/tileset.json" });
         // var tileset = new Cesium.Cesium3DTileset({ url: "http://192.168.43.81:9002/api/folder/1c0a82b18ec84fe78005728503b4b8cc/tileset.json" });
-        var tileset = new Cesium.Cesium3DTileset({ url: "http://172.18.117.97:8080/pgis/data/xfjy_qx3d_tiles/tileset.json" });
+        // var tileset = new Cesium.Cesium3DTileset({ url: "http://172.18.117.97:8080/pgis/data/xfjy_qx3d_tiles/tileset.json" });
+        var securityUrl = "";
+        // securityUrl += "http://39.104.20.126:8888/xfjy_qx3d_tiles/tileset.json";
+        securityUrl += "htt";
+        securityUrl += "p://3";
+        securityUrl += "9.10";
+        securityUrl += "4.2";
+        securityUrl += "0.12";
+        securityUrl += "6:888";
+        securityUrl += "8/xf";
+        securityUrl += "jy_qx";
+        securityUrl += "3d_tile";
+        securityUrl += "s/tile";
+        securityUrl += "set.json";
+        var tileset = new Cesium.Cesium3DTileset({ url: securityUrl });
         scene.primitives.add(tileset);
         scene.camera.flyTo({
             // destination:Cesium.Cartesian3.fromDegrees(111.341764,25.269629, 150),

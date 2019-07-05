@@ -45,7 +45,7 @@ var ezMap = {
             style: 'default',
             imageSRC: '/images/shiliang.png'
         }],*/
-			["TDT", "http://172.25.16.102:8080/EzServer7/WMTS?SERVICE=WMTS", {
+			["TDT", "http://39.104.20.126:8888/EzServer7/WMTS?SERVICE=WMTS", {
                 type: 'wmts',
                 crs: '4326',
                 wrapX: false,
