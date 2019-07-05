@@ -20,6 +20,7 @@ gulp.task('watch', function () {
         [
             './../src/demo*/**/*.html',
             './../src/demo*/**/*.svg',
+            build.config.path.src + '/media/**/*.*',
             build.config.path.src + '/**/*.js',
             build.config.path.src + '/**/*.scss'
         ],
