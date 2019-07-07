@@ -1,67 +1,44 @@
-#bs-alarm-statistics {
-    position: absolute;
-    top: 300px;
-    left: 25px;
-    width: $bs-widget-default-width;
+.fd-alarm-statistics {
+    width: 335px;
     height: 200px;
-    z-index: $bs-widget-default-z-index;
 
-    .bs-circle {
-        position: absolute;
-        top: 15px;
-        left: 5px;
+    .fd-left {
+        width: 120px;
+        height: 180px;
+        float: left;
+        margin: 10px;
 
-        height: 175px;
-        width: 130px;
-        overflow: hidden;
+        color: kt-state-color(light);
 
-        .bs-circle {
-            position: absolute;
-            top: 0;
-            left: 10px;
+        > .fd-pie {
+            width: 120px;
+            height: 120px;
 
-            height: 115px;
-            width: 115px;
-            overflow: hidden;
             background-image: url("./../../media/layouts/circle-statistics.png");
             -webkit-background-size: contain;
             background-size: contain;
-        }
-        .bs-statistics {
-            position: absolute;
-            top: 35px;
-            left: 40px;
-            font-family: "Impact", serif;
-            color: #fff;
-            font-size: 32px;
-        }
-        .bs-title {
-            position: absolute;
-            top: 115px;
-            left: 45px;
-            font-family: "微软雅黑", serif;
-            color: #fff;
-            font-size: 16px;
-        }
+            background-repeat: no-repeat;
 
-        .bs-check-group-labels {
-            position: absolute;
-            top: 155px;
-            left: 10px;
-            .bs-label {
-                font-size: 8px;
-                margin-left: 5px;
-                margin-right: 10px;
+            > .fd-title {
+                font-family: "微软雅黑", serif;
+                font-size: 16px;
+            }
+            > .fd-statistics {
+                padding-top: 12px;
+
+                text-align: center;
+
+                font-family: "Impact", serif;
+                font-size: 32px;
             }
         }
-        .bs-check-group {
-            position: absolute;
-            top: 140px;
-            left: 10px;
+
+        > .fd-control {
+            margin-top: 5px;
             .kt-switch  {
                 // Small size
                 &.kt-switch--bs-xs {
-                    $kt-switch-margin: 2px 0;
+                    $kt-switch-margin: 0;
                     $kt-switch-width: 24px;
                     $kt-switch-height: 16px;
                     $kt-switch-line-height: 16px;
@@ -79,62 +56,71 @@
                             $kt-switch-icon-font-size
                     );
                 }
-            }
-        }
-    }
-
-    .bs-list {
-        position: absolute;
-        top: 10px;
-        left: 65px;
-        width: 210px;
-
-        .bs-item {
-            padding: 3px 10px ;
-            i {
-                font-size: 16px;
-            }
-
-            .bs-label {
-                font-size: 18px;
-                color: kt-state-color(light);
-            }
-
-            .bs-data {
-                width: 120px;
-                float: right;
-                text-align: right;
-                font-family: $bs-number-font-family;
-                font-size: 18px;
-                color: kt-state-color(warning);
-
-                ul {
-                    width: 100px;
-                    margin: 5px 0 0 0;
-                    overflow: hidden;
-                    height: 20px;
-                    position: relative;
-                    list-style-type: none;
-
-                    -webkit-box-sizing: unset;
-                    -moz-box-sizing: unset;
-                    box-sizing: unset;
-
-                    li {
-                        position: absolute;
-                    }
+                > label {
+                    margin-bottom: 0 !important;
                 }
             }
         }
-        .bs-compare {
-            .bs-label {
-                padding-left: 20px;
-                font-size: 18px;
-                color: kt-state-color(light);
+        > .fd-check-group-labels {
+            .fd-label {
+                font-size: 8px;
+                margin-left: 5px;
+                margin-right: 10px;
             }
-            .bs-data {
-                font-family: $bs-number-font-family;
-                font-size: 16px;
+        }
+    }
+    .fd-right {
+        float: left;
+        .fd-list {
+            width: 175px;
+
+            .fd-item {
+                padding: 10px 0 0 0;
+                i {
+                    font-size: 16px;
+                }
+
+                .fd-label {
+                    font-size: 16px;
+                    color: kt-state-color(light);
+                }
+
+                .fd-data {
+                    width: 110px;
+                    float: right;
+                    text-align: right;
+                    font-family: $bs-number-font-family;
+                    font-size: 16px;
+                    color: kt-state-color(warning);
+
+                    ul {
+                        width: 80px;
+                        margin: 3px 0 0 0;
+                        overflow: hidden;
+                        height: 20px;
+                        position: relative;
+                        list-style-type: none;
+
+                        -webkit-box-sizing: unset;
+                        -moz-box-sizing: unset;
+                        box-sizing: unset;
+
+                        li {
+                            position: absolute;
+                        }
+                    }
+                }
+            }
+            .fd-compare {
+                margin: 10px 0 0 15px;
+                .fd-label {
+                    font-size: 16px;
+                    color: kt-state-color(light);
+                }
+                .fd-data {
+                    font-family: $bs-number-font-family;
+                    font-size: 16px;
+                }
             }
         }
     }

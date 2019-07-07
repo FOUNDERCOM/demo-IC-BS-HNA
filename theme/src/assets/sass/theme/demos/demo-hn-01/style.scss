@@ -30,11 +30,14 @@
 // 7: layout
 @import "layout";
 
+// 8: irregular border
+@import "irregular-border";
+
 // 7: Widgets
 @import "title";
 @import "date-weather";
-//@import "basedata";
-//@import "alarm-statistics";
+@import "basedata";
+@import "alarm-statistics";
 //@import "dangerous-person";
 //@import "base-data-static";
 //@import "dangerous-person";

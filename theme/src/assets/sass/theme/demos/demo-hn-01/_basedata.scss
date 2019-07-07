@@ -1,124 +1,45 @@
-#bs-earth {
-    position: absolute;
-    top: 90px;
-    left: 25px;
+.fd-animate-logo {
+    float: left;
+
     width: 200px;
     height: 200px;
-    z-index: $bs-widget-default-z-index;
 
-    .bs-earth1 {
-        width: 100%;
-        height: 100%;
-        border-radius: 100px;
-        background-image: url("./../../media/layouts/earth1.gif");
-        background-size: 240px;
-        background-position: -20px -10px;
-
-        -webkit-filter: url("./../../media/layouts/earth1.svg#earth");
-        filter: url("./../../media/layouts/earth1.svg#earth");
-    }
-    .bs-earth2 {
-        width: 100%;
-        height: 100%;
-        border-radius: 100px;
-        background-image: url("./../../media/layouts/earth2.gif");
-        background-size: 230px;
-        background-position: -15px -15px;
-
-        -webkit-filter: url("./../../media/layouts/earth2.svg#earth");
-        filter: url("./../../media/layouts/earth2.svg#earth");
-    }
-    .bs-earth3 {
-        width: 100%;
-        height: 100%;
-        border-radius: 100px;
-        background-image: url("./../../media/layouts/earth3.gif");
-        background-size: 225px;
-        background-position: -15px -12px;
-
-        -webkit-filter: url("./../../media/layouts/earth3.svg#earth");
-        filter: url("./../../media/layouts/earth3.svg#earth");
-    }
+    border-radius: 100px;
+    background-size: 240px;
+    background: url("./../../media/layouts/earth1.gif") -20px -10px;
 }
-#bs-base-data {
-    position: absolute;
-    top: 95px;
-    left: 245px;
+.fd-base-data {
+    float: left;
     width: 130px;
-    height: 190px;
+    height: 200px;
+    margin-left: 5px;
+    background-image: url("./../../media/layouts/fd-black-bg.svg");
 
-    .bs-base-data-bg {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: kt-state-color(dark);
-        opacity: $bs-dark-background-opacity;
-        z-index: 1;
+    > .fd-data {
+        width: 130px;
+        height: 60px;
+        margin: 0 0 10px 0;
     }
-    .bs-base-data-value {
-        position: absolute;
-        width: 110px;
-        height: 36px;
-        top: 22px;
-        left: 0;
-        text-align: right;
+
+    span {
+        font-family: $fd-number-font-family;
         color: kt-state-color(dark);
-        font-family: $bs-number-font-family;
         font-size: 18px;
-        z-index: 3;
+        font-weight: bold;
+        float: right;
+        margin: 23px 15px 0 0;
     }
 
-    .bs-base-data-person {
-        position: absolute;
-        width: 130px;
-        height: 60px;
-        top: 0;
-        left: 0;
-
-        .bs-base-data-bg-img {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-image: url("./../../media/layouts/base-person.png");
-            -webkit-background-size: contain;
-            background-size: contain;
-            z-index: 2;
-        }
+    > .fd-house {
+        background-image: url("./../../media/layouts/base-house.png");
+        background-size: 130px 60px;
     }
-
-    .bs-base-data-house {
-        position: absolute;
-        width: 130px;
-        height: 60px;
-        top: 65px;
-        left: 0;
-
-        .bs-base-data-bg-img {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-image: url("./../../media/layouts/base-house.png");
-            -webkit-background-size: contain;
-            background-size: contain;
-            z-index: 2;
-        }
+    > .fd-company {
+        background-image: url("./../../media/layouts/base-company.png");
+        background-size: 130px 60px;
     }
-
-    .bs-base-data-company {
-        position: absolute;
-        width: 130px;
-        height: 60px;
-        top: 130px;
-        left: 0;
-
-        .bs-base-data-bg-img {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-image: url("./../../media/layouts/base-company.png");
-            -webkit-background-size: contain;
-            background-size: contain;
-            z-index: 2;
-        }
+    > .fd-person {
+        background-image: url("./../../media/layouts/base-person.png");
+        background-size: 130px 60px;
     }
 }
