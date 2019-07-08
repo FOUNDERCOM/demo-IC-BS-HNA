@@ -49,7 +49,7 @@ angular.module('WebAppICBS').controller('AlarmStatisticsCtrl', ['$rootScope', '$
      * 获得画布
      */
     var getSvg = function () {
-        return d3.select(".bs-alarm-statistics-bar svg");
+        return d3.select(".fd-alarm-statistics-bar svg");
     };
 
     /**
@@ -154,10 +154,10 @@ angular.module('WebAppICBS').controller('AlarmStatisticsCtrl', ['$rootScope', '$
             .rangeRound([0, cfg.width]);
         var xAxis = d3.axisBottom(xScale);
         svg.append("g")
-            .attr("class", "bs-axis-alarm")
+            .attr("class", "fd-axis-alarm")
             .attr("transform", "translate(0, 100)")
             .call(xAxis);
-        svg.select(".bs-axis-alarm").selectAll("text").data(data).html(function (d) {
+        svg.select(".fd-axis-alarm").selectAll("text").data(data).html(function (d) {
             return d.name;
         })
     };

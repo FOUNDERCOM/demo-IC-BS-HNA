@@ -30,3 +30,39 @@
         z-index: 3;
     }
 }
+.fd-dangerous-person {
+    width: 335px;
+    height: 360px;
+    .fd-title {
+        width: 120px;
+        height: 120px;
+
+        float: left;
+
+        background-image: url("./../../media/layouts/dangerous-person-title.png");
+        -webkit-background-size: contain;
+        background-size: contain;
+    }
+    .fd-category {
+        width: 195px;
+        height: 140px;
+
+        float: left;
+
+        background-image: url("./../../media/layouts/vip.png");
+        -webkit-background-size: 260px 260px;
+        background-size: 260px 260px;
+        background-position: -70px 0;
+    }
+    .fd-dept {
+        width: 315px;
+        height: 200px;
+
+        float: left;
+
+        background-image: url("./../../media/layouts/vip.png");
+        -webkit-background-size: 320px 380px;
+        background-size: 320px 380px;
+        background-position: 0 -180px;
+    }
+}
