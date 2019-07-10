@@ -103,5 +103,7 @@ $fd-ireg-border-rect-left-top-length: 60%;
         width: calc(100% - 20px);
         margin: $fd-ireg-content-margin;
         background-image: url("./../../media/layouts/fd-black-bg.svg");
+
+        border: 1px solid kt-state-color(tech);
     }
 }
