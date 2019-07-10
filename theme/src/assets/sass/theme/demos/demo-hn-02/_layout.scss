@@ -1,0 +1,54 @@
+.fd-layout-container {
+    width: $fd-body-width;
+    height: $fd-body-height;
+
+    transform-origin: left top;
+    margin: 0;
+    overflow: hidden;
+
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+    background-color: kt-state-color(dark);
+
+    .fd-widget {
+        pointer-events: auto;
+    }
+
+    > .fd-layout-header {
+        width: calc(100%);
+        height: 85px;
+        margin: 0;
+        background-color: kt-state-color(brand);
+
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+
+        > .fd-info {
+            height: 50px;
+            width: 600px;
+            margin: 25px 0 0 25px;
+            background-color: kt-state-color(info);
+        }
+        > .fd-title {
+            height: 50px;
+            width: 375px;
+            margin: 25px 25px 0 0;
+            background-color: kt-state-color(success);
+        }
+        > .fd-menu {
+            height: 50px;
+            width: 375px;
+            margin: 25px 25px 0 0;
+            background-color: kt-state-color(warning);
+        }
+    }
+}

@@ -1,0 +1,47 @@
+//
+// Demo Config
+//
+
+// State Color
+$kt-state-colors: (
+    // Metronic states
+    brand: (
+        base: #505ae2,
+        inverse: #ffffff
+    ),
+    light: (
+        base: #ffffff,
+        inverse: #282a3c
+    ),
+    dark: (
+        base: lighten(#111111, 12%),
+        inverse: #ffffff
+    ),
+
+    // Bootstrap states
+    primary: (
+        base: #5867dd,
+        inverse: #ffffff
+    ),
+    success: (
+        base: #1dc9b7,
+        inverse: #ffffff
+    ),
+    info: (
+        base: #5578eb,
+        inverse: #ffffff
+    ),
+    warning: (
+        base: #ffcc33,
+        inverse: #111111
+    ),
+    danger: (
+        base: #ff6666,
+        inverse: #ffffff
+    ),
+    tech: (
+        base: #33ffff,
+        inverse: #111111
+    )
+);
+

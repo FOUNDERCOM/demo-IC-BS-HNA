@@ -140,6 +140,26 @@
                     }
                 }
             },
+            "demo-hn-02": {
+                "base": {
+                    "src": {
+                        "styles": [
+                            "{$config.path.src}/sass/theme/demos/demo-hn-02/style.scss"
+                        ],
+                        "scripts": [
+                            "{$config.path.src}/js/theme/core/*.js",
+                            "{$config.path.src}/js/theme/core/base/**/*.js",
+                            "{$config.path.src}/js/theme/core/**/*.js",
+                            "{$config.path.src}/js/theme/demos/demo-hn-02/*.js",
+                            "{$config.path.src}/js/theme/demos/demo-hn-02/**/*.js"
+                        ]
+                    },
+                    "bundle": {
+                        "styles": "{$config.dist}/css/demo-hn-02/style.bundle.css",
+                        "scripts": "{$config.dist}/js/demo-hn-02/scripts.bundle.js"
+                    }
+                }
+            },
             "lab": {
                 "base": {
                     "src": {

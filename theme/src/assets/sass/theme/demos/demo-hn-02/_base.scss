@@ -1,0 +1,13 @@
+@font-face {
+    font-family: "DSEG7 Classic Mini";
+    src: url('./../../media/fonts/DSEG7ClassicMini-Bold.woff.ttf');
+}
+
+.fd-body {
+    width: 1960px;
+    height: 1080px;
+
+    transform-origin: left top;
+    margin: 0;
+    overflow: hidden;
+}

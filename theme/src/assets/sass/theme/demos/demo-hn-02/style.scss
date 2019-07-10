@@ -1,0 +1,36 @@
+
+
+////////////////////////////////////////////////////////////////
+///////////// DO NOT MODIFY BELOW INCLUDE ORDER ////////////////
+////////////////////////////////////////////////////////////////
+
+// 1: Include global config
+@import "../../config";
+
+// 2: Include demo config (that overrides the above global config)
+@import "config";
+
+// 3: Bootstrap Include
+@import "../../../bootstrap/variables";
+@import "../../../../../../tools/node_modules/bootstrap/scss/bootstrap";
+@import "../../../bootstrap/bootstrap.scss";
+
+// 4: Core Include
+@import "../../core/include";
+////////////////////////////////////////////////////////////////
+///////////// DO NOT MODIFY ABOVE INCLUDE ORDER ////////////////
+////////////////////////////////////////////////////////////////
+
+// 5: Variables
+@import "variables";
+
+// 6: Body
+@import "base";
+
+// 7: layout
+@import "layout";
+
+// 8: irregular border
+@import "irregular-border";
+
+// 7: Widgets
