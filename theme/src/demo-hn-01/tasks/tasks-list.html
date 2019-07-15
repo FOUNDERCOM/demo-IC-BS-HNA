@@ -1,4 +1,4 @@
-<div class="bs-filters">
+<div class="fd-filters">
     <div class="dropdown dropdown-inline">
         <button type="button" class="btn btn-sm btn-icon btn-circle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fa fa-filter kt-font-tech"></i>
@@ -84,8 +84,9 @@
         </div>
     </div>
 </div>
-<div class="bs-tasks-list" data-ng-init="perfect()">
-    <div class="bs-item" ng-repeat="item in list
+
+<div class="fd-tasks-list" data-ng-init="perfect()">
+    <div class="fd-item" ng-repeat="item in list
     | filter: taskFilter">
         <i class="fa fa-info-circle kt-font-success kt-font-lg" ng-if="item['task_res'] == '任务'" title="任务"></i>
         <i class="fa fa-bell kt-font-warning kt-font-lg" ng-if="item['task_res'] != '任务'" title="预警"></i>
@@ -99,16 +100,16 @@
         <i class="fa fa-check-square kt-font-lg kt-font-success" ng-if="item['task_response'].startsWith('已')" title="{{item['task_response']}}"></i>
         <i class="fa fa-minus-square kt-font-lg kt-font-danger" ng-if="!item['task_response'].startsWith('已')" title="{{item['task_response']}}"></i>
 
-        <span class="bs-task-date">{{item.task_date}}</span>
+        <span class="fd-task-date">{{item.task_date}}</span>
 
-        <span class="bs-context kt-font-{{item['task_res'] == '任务' ? 'tech' : 'warning'}}">
+        <span class="fd-context kt-font-{{item['task_res'] == '任务' ? 'tech' : 'warning'}}">
                 {{item.task_content}}
         </span>
     </div>
 </div>
 
 <!--begin: Pagination-->
-<div class="bs-pagination kt-pagination kt-pagination--tech">
+<div class="fd-pagination kt-pagination kt-pagination--tech">
     <ul class="kt-pagination__links">
         <li class="kt-pagination__link--first">
             <a href="#"><i class="fa fa-angle-double-left kt-font-tech"></i></a>

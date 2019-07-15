@@ -1,28 +1,19 @@
-#bs-tasks {
-    position: absolute;
-    top: 460px;
-    right: 25px;
-    width: $bs-widget-default-width;
-    height: 595px;
-    z-index: $bs-widget-default-z-index;
+.fd-tasks {
+    width: 375px;
+    height: 575px;
 
-    .bs-tasks-list-pg {
-        position: absolute;
-        top: 50px;
-        left: 20px;
+    .fd-tasks-list-pg {
+        padding-left: 10px;
         width: 330px;
         height: 640px;
 
-        .bs-filters {
-            position: absolute;
-            top: 5px;
-            left: 10px;
+        .fd-filters {
             span {
                 float: left;
                 margin-left: 5px;
             }
             .dropdown-menu {
-                background-color: rgba(0,0,0,0.5);
+                background-color: rgba(0,0,0,0.8);
                 .dropdown-item:hover, .dropdown-item:focus {
                     background-color: transparent;
                 }
@@ -51,11 +42,10 @@
             }
         }
 
-        .bs-tasks-list {
-            position: absolute;
-            top: 30px;
+        .fd-tasks-list {
             width: 330px;
             height: 450px;
+            position: relative;
 
             .ps__rail-y  {
                 .ps__thumb-y{
@@ -64,25 +54,23 @@
             }
 
             font-size: 16px;
-            .bs-item {
+            .fd-item {
                 height: 70px;
                 -ms-word-break: break-all;
                 word-break: break-all;
                 margin-top: 5px;
 
-                background-image: url("./../../media/layouts/task-separator.png");
-                -webkit-background-size: contain;
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: bottom;
+                border-bottom: 2px solid;
+                border-image:  -webkit-linear-gradient(left, rgba(255,255,255,0.2) , kt-state-color(tech) , rgba(255,255,255,0.2))1 10 1;
+                border-image: -moz-linear-gradient(left, rgba(255,255,255,0.2) , kt-state-color(tech) , rgba(255,255,255,0.2))1 10 1;
 
-                .bs-task-date {
+                .fd-task-date {
                     padding-left: 20px;
                     color: kt-state-color(tech);
                     font-size: 10px;
                     font-family: $bs-number-font-family;
                 }
-                .bs-context {
+                .fd-context {
                     font-size: 14px;
                     overflow: hidden;
                     text-overflow: ellipsis;
@@ -93,11 +81,9 @@
             }
         }
 
-        .bs-pagination {
-            position: absolute;
-            top: 460px;
+        .fd-pagination {
             width: 330px;
-            height: 100px;
+            height: 50px;
             li {
                 a {
                     min-width: 20px;

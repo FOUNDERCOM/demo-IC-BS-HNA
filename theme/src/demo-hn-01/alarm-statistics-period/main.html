@@ -1,27 +1,32 @@
-<div class="fd-alarm-statistics-period" ng-controller="AlarmStatisticsCtrl">
-    <div class="fd-alarm-statistics-bar" data-ng-init="drawBar()">
-        <svg>
-            <defs>
-                <linearGradient id="alarm-bar-linear" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%"   stop-color="#33ffff"/>
-                    <stop offset="30%" stop-color="#017efe"/>
-                </linearGradient>
-            </defs>
-        </svg>
-    </div>
-
-    <div class="fd-alarm-statistics-time-line">
-        <div class="fd-time-line-name fd-box">
-            <span class="bs-week">周</span>
-            <span class="bs-day">日</span>
+<div class="fd-widget-logo">
+    <i class="fa fa-chart-bar"></i>
+</div>
+<div class="fd-widget-content">
+    <div class="fd-alarm-statistics-period" ng-controller="AlarmStatisticsCtrl">
+        <div class="fd-alarm-statistics-bar" data-ng-init="drawBar()">
+            <svg>
+                <defs>
+                    <linearGradient id="alarm-bar-linear" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%"   stop-color="#33ffff"/>
+                        <stop offset="30%" stop-color="#017efe"/>
+                    </linearGradient>
+                </defs>
+            </svg>
         </div>
-        <div class="fd-arrow fd-box fa fa-angle-double-left"></div>
-        <ul class="fd-time-line-list fd-box">
-            <li ng-repeat="item in timeLineList">
-                <span class="fd-week">{{item.week}}</span>
-                <span class="fd-day">{{item.day}}</span>
-            </li>
-        </ul>
-        <div class="fd-arrow fd-box fa fa-angle-double-right"></div>
+
+        <div class="fd-alarm-statistics-time-line">
+            <div class="fd-time-line-name fd-box">
+                <span class="bs-week">周</span>
+                <span class="bs-day">日</span>
+            </div>
+            <div class="fd-arrow fd-box fa fa-angle-double-left"></div>
+            <ul class="fd-time-line-list fd-box">
+                <li ng-repeat="item in timeLineList">
+                    <span class="fd-week">{{item.week}}</span>
+                    <span class="fd-day">{{item.day}}</span>
+                </li>
+            </ul>
+            <div class="fd-arrow fd-box fa fa-angle-double-right"></div>
+        </div>
     </div>
 </div>

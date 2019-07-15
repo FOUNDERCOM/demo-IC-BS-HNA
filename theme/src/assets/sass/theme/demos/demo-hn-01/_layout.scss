@@ -1,3 +1,124 @@
+////////////////////////////////////////////////////////////////
+////////////////// MINIMIZE  CONFIGURATION /////////////////////
+////////////////////////////////////////////////////////////////
+@mixin fd-transition() {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+@mixin fd-layout-minimize($type) {
+    .fd-widget-logo {
+        display: none;
+
+        width: 100%;
+        height: 100%;
+
+        background-size: contain;
+        -moz-background-size: contain;
+        background-repeat: no-repeat;
+        @if $type==left {
+            background-image: url("./../../media/layouts/widget-minimize-bg-left.svg");
+        } @else if $type==right {
+            background-image: url("./../../media/layouts/widget-minimize-bg-right.svg");
+        }
+
+        cursor: pointer;
+        color: kt-state-color(light);
+        &:hover i {
+            color: kt-state-color(tech);
+        }
+        &:hover span {
+            color: kt-state-color(tech);
+        }
+
+        i {
+            margin: auto;
+            font-size: 32px;
+            opacity: 0.75;
+        }
+        span {
+            color: inherit;
+            width: 18px;
+            margin: auto;
+            font-size: 24px;
+            opacity: 0.75;
+        }
+
+        @include fd-transition();
+        @if $type==left {
+            .fd-layout-aside-left-minimize & {
+                display: flex;
+            }
+        } @else if $type==right {
+            .fd-layout-aside-right-minimize & {
+                display: flex;
+            }
+        }
+    }
+    .fd-widget-content {
+        @include fd-transition();
+        @if $type==left {
+            .fd-layout-aside-left-minimize & {
+                display: none;
+            }
+        } @else if $type==right {
+            .fd-layout-aside-right-minimize & {
+                display: none;
+            }
+        }
+    }
+}
+
+%fd-layout-right-minimize {
+    @include fd-transition();
+    .fd-layout-aside-right-minimize & {
+        margin-left: auto;
+        width: 60px;
+        height: 180px;
+
+        margin-right: 0;
+
+        &:hover {
+            width: 80px;
+            height: 240px;
+        }
+    }
+}
+
+%fd-layout-left-minimize {
+    @include fd-transition();
+    .fd-layout-aside-left-minimize & {
+        width: 80px;
+        height: 80px;
+
+        margin-left: 0;
+
+        &:hover {
+            width: 120px;
+            height: 120px;
+        }
+    }
+}
+
+%fd-layout-toggler {
+    position: absolute;
+    top: -10px;
+    width: 20px;
+    height: 20px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background-color: gold;
+}
+
+////////////////////////////////////////////////////////////////
+//////////////////// MAIN  CONFIGURATION ///////////////////////
+////////////////////////////////////////////////////////////////
 .fd-layout-with-map {
     position: absolute;
     top: 0;
@@ -27,10 +148,9 @@
         height: 85px;
         margin: 0;
 
-        background-image: url("./../../media/layouts/map-mask.png");
         -webkit-background-size: 1920px 120px;
         background-size: 1920px 120px;
-        background-repeat: no-repeat;
+        background: url("./../../media/layouts/map-mask.png") no-repeat;
 
         display: -webkit-flex;
         display: flex;
@@ -49,6 +169,15 @@
             width: 375px;
             margin: 25px 25px 0 0;
         }
+
+        .fd-layout-toggler-left {
+            left: -10px;
+            @extend %fd-layout-toggler;
+        }
+        .fd-layout-toggler-right {
+            right: 30px;
+            @extend %fd-layout-toggler;
+        }
     }
 
     > .fd-layout-aside-left {
@@ -61,25 +190,38 @@
         -webkit-flex-wrap: nowrap;
         flex-wrap: nowrap;
 
+        @include fd-layout-minimize(left);
+
         > .fd-widget-3 {
             margin: 10px 0 0 25px;
             width: 335px;
             height: 200px;
+
+            @extend %fd-layout-left-minimize;
+            .fd-layout-aside-left-minimize & {
+                margin-top: 100px;
+            }
         }
         > .fd-widget-4 {
             margin: 10px 0 0 25px;
             width: 335px;
             height: 200px;
+
+            @extend %fd-layout-left-minimize;
         }
         > .fd-widget-5 {
             margin: 10px 0 0 25px;
             width: 335px;
             height: 360px;
+
+            @extend %fd-layout-left-minimize;
         }
         > .fd-widget-6 {
             margin: 10px 0 25px 25px;
             width: 1400px;
             height: 170px;
+
+            @extend %fd-layout-left-minimize;
         }
     }
 
@@ -88,23 +230,33 @@
         width: 375px;
         height: 960px;
 
+        @include fd-transition();
+        .fd-layout-aside-right-minimize & {
+            margin: 100px 0 auto auto;
+        }
+
+        @include fd-layout-minimize(right);
+
         > .fd-widget-7 {
             margin: 0;
             width: 375px;
             height: 175px;
-            background-color: kt-state-color(danger);
+
+            @extend %fd-layout-right-minimize;
         }
         > .fd-widget-8 {
             margin-top: 10px;
             width: 375px;
             height: 190px;
-            background-color: kt-state-color(danger);
+
+            @extend %fd-layout-right-minimize;
         }
         > .fd-widget-9 {
             margin-top: 10px;
             width: 375px;
             height: 575px;
-            background-color: kt-state-color(danger);
+
+            @extend %fd-layout-right-minimize;
         }
     }
 }
