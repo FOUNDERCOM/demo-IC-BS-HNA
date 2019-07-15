@@ -150,7 +150,8 @@
 
         -webkit-background-size: 1920px 120px;
         background-size: 1920px 120px;
-        background: url("./../../media/layouts/map-mask.png") no-repeat;
+        background-image: url("./../../media/layouts/map-mask.png");
+        background-repeat: no-repeat;
 
         display: -webkit-flex;
         display: flex;

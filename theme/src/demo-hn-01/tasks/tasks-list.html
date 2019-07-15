@@ -1,4 +1,7 @@
 <div class="fd-filters">
+    <button type="button" class="btn btn-sm btn-icon btn-circle" data-toggle="modal" data-target="#kt_modal_1">
+        <i class="fa fa-search kt-font-tech"></i>
+    </button>
     <div class="dropdown dropdown-inline">
         <button type="button" class="btn btn-sm btn-icon btn-circle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fa fa-filter kt-font-tech"></i>
@@ -151,3 +154,72 @@
 </div>
 
 <!--end: Pagination-->
+
+<!--begin::Modal-->
+<div class="modal fade" id="kt_modal_1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+        <div class="modal-content fd-ireg-border-box">
+            <div class="fd-ireg-border fd-ireg-border-top"></div>
+            <div class="fd-ireg-border fd-ireg-border-top-light"></div>
+            <div class="fd-ireg-border fd-ireg-border-bottom"></div>
+            <div class="fd-ireg-border-bg"></div>
+            <div class="fd-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">预警&任务</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body fd-task-table">
+                    <table class="table">
+                        <thead>
+                            <tr class="kt-font-tech text-center f18">
+                                <th class="wid60px">#</th>
+                                <th class="wid90px">来源</th>
+                                <th class="wid120px">类型</th>
+                                <th class="wid160px">时间</th>
+                                <th class="wid330px">描述</th>
+                                <th class="wid90px">签收</th>
+                                <th class="wid90px">处理</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="text-center kt-font-tech f16" ng-repeat="item in list | filter: taskFilter">
+                                <td class="wid60px"></td>
+                                <td class="wid90px">
+                                    <i class="fa fa-info-circle kt-font-success kt-font-lg" ng-if="item['task_res'] == '任务'" title="任务"></i>
+                                    <i class="fa fa-bell kt-font-warning kt-font-lg" ng-if="item['task_res'] != '任务'" title="预警"></i>
+                                    {{item['task_res']}}
+                                </td>
+                                <td class="wid120px">
+                                    <span class="kt-badge kt-badge--md kt-badge--inline kt-font-lg kt-badge--{{colors[item['task_type']]}}">{{item.task_type}}</span>
+                                </td>
+                                <td class="wid160px">{{item.task_date}}</td>
+                                <td class="text-left wid330px" title="{{item.task_content}}">
+                                    <span class="fd-context kt-font-{{item['task_res'] == '任务' ? 'tech' : 'warning'}}">{{item.task_content}}</span>
+                                </td>
+                                <td class="wid90px">
+                                    <i class="fa fa-calendar-check kt-font-lg kt-font-success" ng-if="item['task_accept'].startsWith('已')" title="{{item['task_accept']}}"></i>
+                                    <i class="fa fa-business-time kt-font-lg kt-font-danger" ng-if="!item['task_accept'].startsWith('已')" title="{{item['task_accept']}}"></i>
+                                    {{item['task_accept']}}
+                                </td>
+                                <td class="wid90px">
+                                    <i class="fa fa-check-square kt-font-lg kt-font-success" ng-if="item['task_response'].startsWith('已')" title="{{item['task_response']}}"></i>
+                                    <i class="fa fa-minus-square kt-font-lg kt-font-danger" ng-if="!item['task_response'].startsWith('已')" title="{{item['task_response']}}"></i>
+                                    {{item['task_response']}}
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-tech" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-tech">确定</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!--end::Modal-->

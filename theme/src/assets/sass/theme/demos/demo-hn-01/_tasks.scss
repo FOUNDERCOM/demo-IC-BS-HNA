@@ -2,12 +2,37 @@
     width: 375px;
     height: 575px;
 
+    #kt_modal_1 {
+        .fd-task-table {
+            height: 600px;
+            display: block;
+            position: relative;
+            overflow: hidden;
+
+            .fd-context {
+                min-width: 10rem;
+                max-width: 40rem;
+                overflow: hidden;
+                white-space : nowrap;
+                text-overflow: ellipsis;
+                display: block;
+            }
+
+            .ps__rail-y  {
+                .ps__thumb-y{
+                    background-color: kt-state-color(tech);
+                }
+            }
+        }
+    }
+
     .fd-tasks-list-pg {
         padding-left: 10px;
         width: 330px;
         height: 640px;
 
         .fd-filters {
+            float: right;
             span {
                 float: left;
                 margin-left: 5px;

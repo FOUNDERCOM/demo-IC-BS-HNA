@@ -121,5 +121,8 @@ angular.module('WebAppICBS').controller('TaskCtrl', ['$rootScope', '$scope', fun
         new PerfectScrollbar('.fd-tasks-list', {
             minScrollbarLength: 100
         });
+        new PerfectScrollbar('.fd-task-table', {
+            minScrollbarLength: 100
+        });
     };
 }]);

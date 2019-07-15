@@ -9,8 +9,9 @@
 
     transform-origin: left top;
     margin: 0;
-    overflow: hidden;
+    overflow: hidden !important;
     background-image: url("./../../media/layouts/bg-all-temp.png");
-    -webkit-background-size: contain;
-    background-size: contain;
+    background-position: 0 -25px;
+    -webkit-background-size: 1920px 1105px;
+    background-size: 1920px 1105px;
 }
