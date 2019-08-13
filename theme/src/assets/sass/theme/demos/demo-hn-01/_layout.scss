@@ -125,6 +125,7 @@
 }
 
 .fd-layout-container {
+    pointer-events: none;
     width: $fd-body-width;
     height: $fd-body-height;
 
@@ -176,7 +177,7 @@
             @extend %fd-layout-toggler;
         }
         .fd-layout-toggler-right {
-            right: 30px;
+            right: -10px;
             @extend %fd-layout-toggler;
         }
     }

@@ -1,4 +1,37 @@
 .fd-important-area {
     width: 375px;
     height: 190px;
+
+    .data-area {
+        margin: 10px 5px;
+    }
+    .data {
+        width: 90px;
+        height: 90px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        text-align: center;
+        padding-top: 20px;
+        .val {
+            font-size: 24px;
+            color: kt-state-color(light)
+        }
+        .title {
+            padding-top: 18px;
+            font-size: 12px;
+            color: kt-state-color(light);
+        }
+    }
+
+    .data1 {
+        background-image: url("./../../media/layouts/circle-bg-01.svg");
+    }
+
+    .data2 {
+        background-image: url("./../../media/layouts/circle-bg-02.svg");
+    }
+
+    .data3 {
+        background-image: url("./../../media/layouts/circle-bg-03.svg");
+    }
 }

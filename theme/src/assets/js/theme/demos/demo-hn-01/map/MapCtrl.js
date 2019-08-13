@@ -24,7 +24,7 @@ angular.module('WebAppICBS').controller('MapCtrl', ['$rootScope', '$scope', func
 
     $scope.initMap = function() {
 
-        var map = new EzMap('bs-map');
+        var map = new EzMap('fd-map');
         map.centerAndZoom(new EzCoord(106.568, 26.364), 6);
 
         //矢量地图
@@ -136,7 +136,7 @@ angular.module('WebAppICBS').controller('MapCtrl', ['$rootScope', '$scope', func
         scene.primitives.add(tileset);
         scene.camera.flyTo({
             // destination:Cesium.Cartesian3.fromDegrees(111.341764,25.269629, 150),
-            destination:Cesium.Cartesian3.fromDegrees(114.06121924659066,30.30007649989971, 200),
+            destination:Cesium.Cartesian3.fromDegrees(114.06121924659066,30.30007649989971, 5000),
             orientation : {
                 heading : Cesium.Math.toRadians(0.0),
                 pitch : Cesium.Math.toRadians(-25.0),

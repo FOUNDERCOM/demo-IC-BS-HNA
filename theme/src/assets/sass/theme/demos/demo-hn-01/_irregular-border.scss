@@ -26,7 +26,6 @@ $fd-ireg-border-rect-left-top-length: 60%;
         position: absolute;
         width: 100%;
         height: 50%;
-        z-index: -1;
         &::before, &::after {
             position: absolute;
             content: '';
@@ -89,7 +88,6 @@ $fd-ireg-border-rect-left-top-length: 60%;
 
     .fd-ireg-border-bg {
         position: absolute;
-        z-index: -1;
         margin: $fd-ireg-content-margin;
         height: calc(100% - 24px);
         width: calc(100% - 24px);
@@ -105,5 +103,18 @@ $fd-ireg-border-rect-left-top-length: 60%;
         background-image: url("./../../media/layouts/fd-black-bg.svg");
 
         border: 1px solid kt-state-color(tech);
+
+        .fd-default-title {
+            width: calc(100%);
+            height: 25px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: kt-state-color(tech);
+            background-image: url("./../../media/layouts/default-title-bg.png");
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
     }
 }

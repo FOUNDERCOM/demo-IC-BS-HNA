@@ -22,8 +22,8 @@
     </head>
     <body class="fd-body">
 
-        <div class="fd-map"></div>
-        <div class="fd-layout-container" ng-include="'./demo-hn-01/layout/layout.html'"></div>
+        <div id="fd-map" ng-controller="MapCtrl" data-ng-init=""></div>
+        <div class="fd-layout-container fd-layout-with-map" ng-include="'./demo-hn-01/layout/layout.html'"></div>
 
 
         <!--begin::Page Vendors(used by this page) -->
